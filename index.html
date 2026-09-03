@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagarik App — Nepal Digital Identity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class="phone-wrapper" id="phone-wrapper">
+
+    <!-- Dynamic Island -->
+    <div class="phone-notch"><div class="phone-camera"></div></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span>20:25</span>
+        <div class="status-icons">
+            <i class="fa-solid fa-signal"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+    </div>
+
+    <!-- FaceID Biometric Overlay -->
+    <div class="biometric-overlay" id="biometric-overlay">
+        <span class="nepal-logo">🇳🇵</span>
+        <div class="face-scan-box">
+            <div class="scan-sweep"></div>
+        </div>
+        <p class="scan-label" id="scan-status-text">Authenticating Face ID…</p>
+    </div>
+
+    <!--  SCROLLABLE APP VIEWPORT        -->
+    <div class="app-content">
+        <!-- ─── PAGE 1: HOME ─── -->
+        <div id="page-home" class="app-page active">
+            <div class="home-hero-mygov">
+                <!-- Top Control Bar -->
+                <div class="mygov-top-bar">
+                    <div class="mygov-search-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="खोज्नुहोस् — Search..." id="main-search">
+                    </div>
+                    <div class="mygov-icon-group">
+                        <button class="mygov-icon-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+                        <button class="mygov-icon-btn" onclick="togglePrivacyMask()" title="Hide/Show Details">
+                            <i class="fa-regular fa-eye" id="privacy-eye-icon"></i>
+                        </button>
+                        <button class="mygov-icon-btn" onclick="switchPage('inbox'); setActiveNav('inbox');" title="Inbox">
+                            <i class="fa-regular fa-envelope"></i>
+                        </button>
+                        <button class="mygov-icon-btn" onclick="switchPage('inbox'); setActiveNav('inbox');" title="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="notif-dot" id="notif-dot" style="display:none;"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Clean Light Card -->
+                <div class="mygov-id-card">
+                    <div class="mygov-card-title">नागरिक आईडी (Nagarik ID)</div>
+
+                    <div class="mygov-card-body">
+                        <!-- Left Avatar -->
+                        <img src="avatar.jpg"
+                             class="mygov-avatar user-avatar" alt="User">
+
+                        <!-- Right Details -->
+                        <div class="mygov-details">
+                            <div class="mygov-field-row">
+                                <div class="mygov-field-content">
+                                    <div class="mygov-field-label">नागरिकता नम्बर (Citizenship No.)</div>
+                                    <div class="mygov-field-val val-citizenship">27-01-75-08421</div>
+                                </div>
+                                <button class="mygov-copy-btn" onclick="copyToClipboard(userData.citizenshipNo, this)" title="Copy">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="mygov-field-row">
+                                <div class="mygov-field-content">
+                                    <div class="mygov-field-label">राष्ट्रिय परिचयपत्र (NID Number)</div>
+                                    <div class="mygov-field-val val-nid">983-472-810-5</div>
+                                </div>
+                                <button class="mygov-copy-btn" onclick="copyToClipboard(userData.nid, this)" title="Copy">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Compact QR Scan Button -->
+                <div style="display:flex; justify-content:center; width:100%;">
+                    <button class="mygov-qr-btn" onclick="switchPage('scan'); setActiveNav('scan');">
+                        <i class="fa-solid fa-qrcode"></i>
+                        <span>क्यूआर स्क्यान (QR Scan)</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- Quick Services Grid -->
+            <div class="content-section">
+                <div class="section-title-row">
+                    <span class="section-h">सक्रिय सेवाहरू</span>
+                    <a href="#" class="section-link" onclick="switchPage('services'); setActiveNav('services'); return false;">All <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <!-- Rendered by JS from ALL_SERVICES catalog -->
+                <div class="services-grid" id="home-svc-grid"></div>
+            </div>
+
+            <!-- Promo Banner -->
+            <div class="content-section" style="padding-bottom:0;">
+                <div class="promo-card promo-blue" onclick="openModal('modal-pcc')">
+                    <div class="promo-deco"></div>
+                    <div class="promo-deco-2"></div>
+                    <div class="promo-tag">✨ New Service • नयाँ सेवा</div>
+                    <div class="promo-title">प्रहरी रिपोर्ट अब<br>नागरिक एपबाट सजिलै</div>
+                    <div class="promo-sub">Get your Police Clearance Certificate digitally in 24 hours</div>
+                    <button class="promo-cta">Apply Now →</button>
+                </div>
+            </div>
+
+            <!-- Document Cards -->
+            <div class="content-section">
+                <div class="section-title-row">
+                    <span class="section-h">मेरा कागजातहरू</span>
+                    <a href="#" class="section-link" onclick="showLinkDocumentForm(); return false;">
+                        <i class="fa-solid fa-plus"></i> Add
+                    </a>
+                </div>
+            </div>
+            <div class="docs-scroll-wrap">
+
+                <!-- Citizenship -->
+                <div class="doc-card-wrap">
+                    <div class="doc-card-inner" onclick="this.classList.toggle('flipped')">
+                        <div class="doc-card-face skin-citizenship">
+                            <div class="card-chip-row">
+                                <div class="card-chip"></div>
+                                <div class="card-type-label">Citizenship<br>Certificate</div>
+                            </div>
+                            <div class="card-number val-citizenship">—</div>
+                            <div class="card-footer-row">
+                                <div class="card-footer-field">
+                                    <label>Holder</label>
+                                    <span class="val-user-name">—</span>
+                                </div>
+                                <div class="card-footer-field" style="text-align:right;">
+                                    <label>District</label>
+                                    <span>Kathmandu</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-card-face doc-card-back">
+                            <i class="fa-solid fa-barcode"></i>
+                            <span>Verified · Home Ministry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NID -->
+                <div class="doc-card-wrap">
+                    <div class="doc-card-inner" onclick="this.classList.toggle('flipped')">
+                        <div class="doc-card-face skin-nid">
+                            <div class="card-chip-row">
+                                <div class="card-chip"></div>
+                                <div class="card-type-label">National<br>Identity Card</div>
+                            </div>
+                            <div class="card-number val-nid">—</div>
+                            <div class="card-footer-row">
+                                <div class="card-footer-field">
+                                    <label>Holder</label>
+                                    <span class="val-user-name">—</span>
+                                </div>
+                                <div class="card-footer-field" style="text-align:right;">
+                                    <label>Status</label>
+                                    <span>Biometric ✓</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-card-face doc-card-back">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <span>DoNIDCR Encrypted QR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- License -->
+                <div class="doc-card-wrap">
+                    <div class="doc-card-inner" onclick="this.classList.toggle('flipped')">
+                        <div class="doc-card-face skin-license">
+                            <div class="card-chip-row">
+                                <div class="card-chip"></div>
+                                <div class="card-type-label">Smart Driving<br>License</div>
+                            </div>
+                            <div class="card-number val-license">—</div>
+                            <div class="card-footer-row">
+                                <div class="card-footer-field">
+                                    <label>Holder</label>
+                                    <span class="val-user-name">—</span>
+                                </div>
+                                <div class="card-footer-field" style="text-align:right;">
+                                    <label>Category</label>
+                                    <span>A, B</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-card-face doc-card-back">
+                            <i class="fa-solid fa-barcode"></i>
+                            <span>Verified · DoTM Nepal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAN -->
+                <div class="doc-card-wrap">
+                    <div class="doc-card-inner" onclick="this.classList.toggle('flipped')">
+                        <div class="doc-card-face skin-pan">
+                            <div class="card-chip-row">
+                                <div class="card-chip"></div>
+                                <div class="card-type-label">Permanent<br>Account No.</div>
+                            </div>
+                            <div class="card-number val-pan">—</div>
+                            <div class="card-footer-row">
+                                <div class="card-footer-field">
+                                    <label>Holder</label>
+                                    <span class="val-user-name">—</span>
+                                </div>
+                                <div class="card-footer-field" style="text-align:right;">
+                                    <label>Office</label>
+                                    <span>IRD KTM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-card-face doc-card-back">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <span>Inland Revenue Dept</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Passport (hidden until linked) -->
+                <div class="doc-card-wrap" id="card-passport" style="display:none;">
+                    <div class="doc-card-inner" onclick="this.classList.toggle('flipped')">
+                        <div class="doc-card-face skin-passport">
+                            <div class="card-chip-row">
+                                <div class="card-chip"></div>
+                                <div class="card-type-label">e-Passport<br>राहदानी</div>
+                            </div>
+                            <div class="card-number val-passport">—</div>
+                            <div class="card-footer-row">
+                                <div class="card-footer-field">
+                                    <label>Holder</label>
+                                    <span class="val-user-name">—</span>
+                                </div>
+                                <div class="card-footer-field" style="text-align:right;">
+                                    <label>Type</label>
+                                    <span>e-Passport</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-card-face doc-card-back">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <span>Verified · Passport Dept</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SSF Tracker -->
+            <div class="content-section">
+                <div class="section-title-row">
+                    <span class="section-h">सामाजिक सुरक्षा कोष</span>
+                </div>
+            </div>
+            <div class="tracker-card">
+                <div class="tracker-header">
+                    <div class="tracker-left">
+                        <div class="tracker-title">
+                            <i class="fa-solid fa-vault" style="color:var(--emerald-600);"></i>
+                            SSF Contribution Account
+                        </div>
+                        <div class="tracker-sub" id="ssf-meta-text">Last payout: July 2026</div>
+                    </div>
+                    <div class="tracker-balance" id="ssf-balance-val">रू. 0</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="ssf-progress" style="width:0%"></div>
+                </div>
+                <div class="tracker-meta">
+                    <span>Employer: Prabin Tech Pvt Ltd</span>
+                    <span>Target: 2,00,000</span>
+                </div>
+            </div>
+            <div style="height:16px;"></div>
+
+        </div><!-- /page-home -->
+
+        <!-- ─── PAGE: DOCUMENTS ─── -->
+        <div class="app-page" id="page-documents">
+
+            <div class="page-header">
+                <div class="page-h-title">मेरो कागजातहरू</div>
+                <div class="page-h-sub">Legally valid digital certificates · Nepal Government</div>
+            </div>
+
+            <div class="doc-list" id="doc-list-container">
+                <!-- Injected by JS -->
+            </div>
+
+        </div><!-- /page-documents -->
+
+        <!-- ─── PAGE: QR SHARE ─── -->
+        <div class="app-page" id="page-scan">
+
+            <div class="qr-hero">
+                <div class="qr-title">QR Share Credentials</div>
+                <div class="qr-sub">Select what data to expose. One-time encrypted token.</div>
+                <div class="qr-code-box">
+                    <i class="fa-solid fa-qrcode"></i>
+                </div>
+                <div class="qr-timer">
+                    <i class="fa-solid fa-clock"></i>
+                    Single-use token · resets every 45 seconds
+                </div>
+            </div>
+
+            <div style="padding: 14px 18px 6px; font-size:0.7rem; font-weight:800; color:var(--text-400); text-transform:uppercase; letter-spacing:0.06em;">
+                Select fields to share
+            </div>
+            <div class="qr-options-panel" id="qr-options">
+                <div class="qr-option-item">
+                    <input type="checkbox" checked disabled>
+                    <div class="qr-option-info">
+                        <div class="qr-option-name">Full Name</div>
+                        <div class="qr-option-val val-user-name">—</div>
+                    </div>
+                </div>
+                <div class="qr-option-item">
+                    <input type="checkbox" id="qr-cid" onchange="updateQRCode()">
+                    <div class="qr-option-info">
+                        <div class="qr-option-name">Citizenship No.</div>
+                        <div class="qr-option-val val-citizenship">—</div>
+                    </div>
+                </div>
+                <div class="qr-option-item">
+                    <input type="checkbox" id="qr-nid" onchange="updateQRCode()">
+                    <div class="qr-option-info">
+                        <div class="qr-option-name">National ID No.</div>
+                        <div class="qr-option-val val-nid">—</div>
+                    </div>
+                </div>
+                <div class="qr-option-item">
+                    <input type="checkbox" id="qr-pan" onchange="updateQRCode()">
+                    <div class="qr-option-info">
+                        <div class="qr-option-name">Tax PAN Number</div>
+                        <div class="qr-option-val val-pan">—</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-payload-section">
+                <div class="qr-payload-label">Encrypted Token Preview</div>
+                <div class="qr-payload-box">
+                    <pre id="qr-payload-preview">// Select fields above…</pre>
+                </div>
+            </div>
+
+        </div><!-- /page-scan -->
+
+        <!-- ─── PAGE: SERVICES (Full Catalog) ─── -->
+        <div class="app-page" id="page-services">
+
+            <div class="page-header" style="background:linear-gradient(145deg,#059669,#10B981); padding-bottom:18px;">
+                <div class="page-h-title">सम्पूर्ण सेवाहरू (Services)</div>
+                <div class="page-h-sub">Civic Infrastructure & Government Portal</div>
+                <div class="search-inner" style="margin-top:14px; background:rgba(255,255,255,0.98); border:none;">
+                    <i class="fa-solid fa-magnifying-glass" style="color:var(--emerald-600);"></i>
+                    <input type="text" placeholder="सेवाहरू खोज्नुहोस् — Search catalog…" id="services-search">
+                </div>
+            </div>
+
+            <!-- Category Filter Scrollable Bar -->
+            <div class="cat-filter-wrap">
+                <div class="cat-filter-bar" id="cat-filter-bar"></div>
+            </div>
+
+            <!-- Full Catalog List -->
+            <div id="services-catalog-container" style="padding:0 18px 16px;"></div>
+
+        </div><!-- /page-services -->
+
+
+        <!-- ─── PAGE: INBOX ─── -->
+        <div class="app-page" id="page-inbox">
+
+            <div class="inbox-header" style="padding:20px 20px 28px; position:relative; overflow:hidden;">
+                <div style="position:absolute; top:-30px; right:-30px; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,0.07);"></div>
+                <div class="page-h-title">गतिविधि र सूचना</div>
+                <div class="page-h-sub">Service tracking & notification center</div>
+            </div>
+
+            <div class="subheading">Active Applications</div>
+            <div class="app-list" id="app-list-container">
+                <!-- Injected by JS -->
+            </div>
+
+            <div class="subheading">Notification Center</div>
+            <div class="app-list" id="notif-list-container">
+                <!-- Injected by JS -->
+            </div>
+            <div style="height:16px;"></div>
+
+        </div><!-- /page-inbox -->
+
+        <!-- ─── PAGE: SECURITY ─── -->
+        <div class="app-page" id="page-security">
+
+            <div class="security-header" style="padding:20px 20px 28px;">
+                <div class="page-h-title" style="color:white;">सुरक्षा र अनुमति</div>
+                <div class="page-h-sub" style="color:rgba(255,255,255,0.55);">Data permissions & access audit log</div>
+            </div>
+
+            <div class="subheading">Third-Party Data Access</div>
+            <div class="perm-list" id="perm-list-container">
+                <!-- Injected by JS -->
+            </div>
+
+            <div class="subheading">Access Audit Log</div>
+            <div style="padding: 0 18px 16px; background:white; margin:0 18px; border-radius:var(--r-xl); border:1.5px solid var(--text-200);">
+                <div class="audit-item">
+                    <div class="audit-dot"></div>
+                    <div class="audit-text">Nabil Bank KYC Pull — Citizenship verified</div>
+                    <div class="audit-time">Today, 14:20</div>
+                </div>
+                <div class="audit-item">
+                    <div class="audit-dot" style="background:var(--purple-600);"></div>
+                    <div class="audit-text">MoES — Academic equivalency check</div>
+                    <div class="audit-time">Yesterday</div>
+                </div>
+                <div class="audit-item">
+                    <div class="audit-dot" style="background:var(--emerald-600);"></div>
+                    <div class="audit-text">SSF — Employer contribution deposit</div>
+                    <div class="audit-time">Jul 15</div>
+                </div>
+            </div>
+            <div style="height:16px;"></div>
+
+        </div><!-- /page-security -->
+
+        <!-- ─── PAGE: MORE ─── -->
+        <div class="app-page" id="page-more">
+
+            <!-- Profile Hero -->
+            <div class="home-hero" style="padding-bottom:20px;">
+                <div class="hero-top">
+                    <div class="hero-user-info">
+                        <img src="avatar.jpg"
+                             class="hero-avatar user-avatar" alt="User" style="width:52px;height:52px;">
+                        <div>
+                            <div class="hero-name val-user-name" style="font-size:1.05rem;">Loading…</div>
+                            <div class="hero-greet" style="margin-top:3px;">Premium Nagarik Account</div>
+                        </div>
+                    </div>
+                    <div class="verified-chip"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                </div>
+            </div>
+
+            <!-- Document Wallet Section -->
+            <div class="subheading">📄 मेरो कागजातहरू (Documents)</div>
+            <div class="doc-list" id="more-doc-list">
+                <!-- Injected by JS -->
+            </div>
+
+            <!-- Security / Permissions -->
+            <div class="subheading">🔒 सुरक्षा र अनुमति (Security)</div>
+            <div class="perm-list" id="more-perm-list"></div>
+
+            <div class="subheading">📋 Access Audit Log</div>
+            <div style="padding:0 18px 16px; background:white; margin:0 18px; border-radius:var(--r-xl); border:1.5px solid var(--text-200);">
+                <div class="audit-item">
+                    <div class="audit-dot"></div>
+                    <div class="audit-text">Nabil Bank KYC Pull — Citizenship verified</div>
+                    <div class="audit-time">Today, 14:20</div>
+                </div>
+                <div class="audit-item">
+                    <div class="audit-dot" style="background:var(--purple-600);"></div>
+                    <div class="audit-text">MoES — Academic equivalency check</div>
+                    <div class="audit-time">Yesterday</div>
+                </div>
+                <div class="audit-item">
+                    <div class="audit-dot" style="background:var(--emerald-600);"></div>
+                    <div class="audit-text">SSF — Employer contribution deposit</div>
+                    <div class="audit-time">Jul 15</div>
+                </div>
+            </div>
+
+            <!-- Settings Rows -->
+            <div class="subheading">⚙️ Settings</div>
+            <div style="padding:0 18px 20px; display:flex; flex-direction:column; gap:2px;">
+                <div class="more-menu-row"><i class="fa-solid fa-language"></i> Language / भाषा<span class="more-menu-badge">English</span></div>
+                <div class="more-menu-row"><i class="fa-solid fa-bell"></i> Notification Preferences<span class="more-menu-badge more-badge-blue">On</span></div>
+                <div class="more-menu-row"><i class="fa-solid fa-fingerprint"></i> Biometric Lock<span class="more-menu-badge more-badge-green">Active</span></div>
+                <div class="more-menu-row"><i class="fa-solid fa-shield-halved"></i> Two-Factor Auth<span class="more-menu-badge more-badge-green">Enabled</span></div>
+                <div class="more-menu-row" style="color:var(--nepal-red);"><i class="fa-solid fa-right-from-bracket"></i> Sign Out<i class="fa-solid fa-chevron-right" style="margin-left:auto;"></i></div>
+            </div>
+
+        </div><!-- /page-more -->
+
+        <!-- ─── PAGE: PAYMENTS (भुक्तानी) ─── -->
+        <div class="app-page" id="page-payments">
+            <div class="page-header" style="background:linear-gradient(145deg, #0284C7, #2563EB);">
+                <div class="page-h-title">भुक्तानी र डिजिटल सेवा (Payments)</div>
+                <div class="page-h-sub">Government Taxes, Utility Bills & Service Fees</div>
+            </div>
+
+            <div class="content-section" style="padding-top:14px;">
+                <div class="section-title-row">
+                    <span class="section-h">महसुल तथा कर भुक्तानी (Bills & Taxes)</span>
+                </div>
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap:12px;">
+                    <div class="doc-list-item" onclick="openModal('modal-pay-utility')" style="margin:0;">
+                        <div class="doc-icon" style="background:var(--rose-100); color:var(--nepal-red);">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div class="doc-info">
+                            <div class="doc-name">NEA Electricity</div>
+                            <div class="doc-issuer">नेपाल विद्युत प्राधिकरण</div>
+                        </div>
+                    </div>
+                    <div class="doc-list-item" onclick="openModal('modal-pay-utility')" style="margin:0;">
+                        <div class="doc-icon" style="background:var(--sky-100); color:var(--sky-600);">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div class="doc-info">
+                            <div class="doc-name">Khanepani Water</div>
+                            <div class="doc-issuer">खानेपानी संस्थान / KUKL</div>
+                        </div>
+                    </div>
+                    <div class="doc-list-item" onclick="openModal('modal-pay-utility')" style="margin:0;">
+                        <div class="doc-icon" style="background:var(--amber-100); color:var(--amber-600);">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <div class="doc-info">
+                            <div class="doc-name">Vehicle Tax</div>
+                            <div class="doc-issuer">यातायात व्यवस्था कार्यालय</div>
+                        </div>
+                    </div>
+                    <div class="doc-list-item" onclick="openModal('modal-pay-utility')" style="margin:0;">
+                        <div class="doc-icon" style="background:var(--emerald-100); color:var(--emerald-600);">
+                            <i class="fa-solid fa-building-user"></i>
+                        </div>
+                        <div class="doc-info">
+                            <div class="doc-name">Gaupalika Tax</div>
+                            <div class="doc-issuer">स्थानीय घरजग्गा तथा सम्पत्ति कर</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subheading">Recent Transactions (हालैका भुक्तानीहरू)</div>
+            <div class="app-list" style="padding:0 18px 20px;">
+                <div class="doc-list-item">
+                    <div class="doc-icon" style="background:var(--emerald-100); color:var(--emerald-600);">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-name">NEA Electricity Payment</div>
+                        <div class="doc-issuer">Voucher: #NEA-948271 · Jul 12</div>
+                    </div>
+                    <div class="doc-right">
+                        <span style="font-size:0.85rem; font-weight:800; color:var(--text-900);">रू. 1,450</span>
+                    </div>
+                </div>
+                <div class="doc-list-item">
+                    <div class="doc-icon" style="background:var(--emerald-100); color:var(--emerald-600);">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-name">Traffic Fine Settlement</div>
+                        <div class="doc-issuer">Ticket: #TRF-82019 · Jun 28</div>
+                    </div>
+                    <div class="doc-right">
+                        <span style="font-size:0.85rem; font-weight:800; color:var(--text-900);">रू. 1,000</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /page-payments -->
+
+    </div><!-- /app-content -->
+
+    <!-- ─── BOTTOM NAV ─── -->
+    <div class="bottom-nav">
+        <button class="nav-btn active" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            <span>होम</span>
+        </button>
+        <button class="nav-btn" data-page="services">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>सेवाहरू</span>
+        </button>
+        <button class="nav-btn nav-fab" data-page="scan" onclick="updateQRCode()">
+            <i class="fa-solid fa-qrcode"></i>
+        </button>
+        <button class="nav-btn" data-page="payments">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>भुक्तानी</span>
+        </button>
+        <button class="nav-btn" data-page="more">
+            <i class="fa-solid fa-ellipsis"></i>
+            <span>थप</span>
+        </button>
+    </div>
+
+
+
+
+
+<!-- ═══════════ MODALS ═══════════ -->
+
+<!-- Police Clearance -->
+<div class="modal-overlay" id="modal-pcc">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-pcc')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">🛡️ Police Clearance Certificate</div>
+        <form onsubmit="handlePCCSubmit(event)">
+            <div class="form-group">
+                <label class="form-label">Application Purpose</label>
+                <select id="pcc-purpose" class="form-control" required>
+                    <option value="Employment Abroad">Employment Abroad</option>
+                    <option value="Higher Studies Abroad">Higher Studies Abroad</option>
+                    <option value="Visa Extension">Visa / Residency Extension</option>
+                    <option value="Immigration">Immigration</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Citizenship No. (Auto-filled)</label>
+                <input type="text" class="form-control val-citizenship" readonly
+                       style="background:var(--bg-surface); color:var(--text-500);">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Passport Bio-page Scan</label>
+                <div class="upload-zone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Drag & drop or tap to select (JPEG/PDF, max 2MB)</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<!-- Study NOC -->
+<div class="modal-overlay" id="modal-noc">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-noc')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">🎓 Abroad Study NOC</div>
+        <form onsubmit="handleNOCSubmit(event)">
+            <div class="form-group">
+                <label class="form-label">Destination Country</label>
+                <select id="noc-country" class="form-control" required>
+                    <option>United States</option>
+                    <option>Australia</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                    <option>Japan</option>
+                    <option>Germany</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">University / College Name</label>
+                <input type="text" id="noc-college" class="form-control"
+                       placeholder="e.g. University of Melbourne" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Admission Offer Letter</label>
+                <div class="upload-zone">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Select institution offer letter PDF</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Request NOC Certificate</button>
+        </form>
+    </div>
+</div>
+
+<!-- Notarization -->
+<div class="modal-overlay" id="modal-notary">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-notary')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">📜 Notarization & Translation</div>
+        <form onsubmit="handleNotarySubmit(event)">
+            <div class="form-group">
+                <label class="form-label">Document Type</label>
+                <select id="notary-type" class="form-control" required>
+                    <option>Birth Certificate (जन्म दर्ता)</option>
+                    <option>Marriage Certificate (विवाह दर्ता)</option>
+                    <option>Academic Marksheet</option>
+                    <option>Character Certificate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Upload Original (Nepali)</label>
+                <div class="upload-zone">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Take photo or upload scan</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit for Translation</button>
+        </form>
+    </div>
+</div>
+
+<!-- Hello Sarkar Grievance -->
+<div class="modal-overlay" id="modal-grievance">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-grievance')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">💬 हेलो सरकार — Lodge Grievance</div>
+        <form onsubmit="handleGrievanceSubmit(event)">
+            <div class="form-group">
+                <label class="form-label">Grievance Category</label>
+                <select id="grv-category" class="form-control" required>
+                    <option>Roads & Infrastructure</option>
+                    <option>Electricity / NEA</option>
+                    <option>Drinking Water Supply</option>
+                    <option>Administrative Delay / Corruption</option>
+                    <option>Other Public Service</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Description & Location</label>
+                <textarea id="grv-desc" class="form-control" rows="4"
+                          placeholder="Describe the issue clearly with location details…" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Photo Evidence (Optional)</label>
+                <div class="upload-zone">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Attach geo-tagged photo</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Lodge Grievance</button>
+        </form>
+    </div>
+</div>
+
+<!-- Service Detail (Generic) -->
+<div class="modal-overlay" id="modal-service-detail">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-service-detail')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title" id="svc-detail-title">Service Name</div>
+        <p id="svc-detail-np" style="font-size:1rem; color:var(--text-500); margin-bottom:14px;"></p>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+            <div style="background:var(--bg-surface); border-radius:var(--r-lg); padding:12px 14px; font-size:0.8rem; color:var(--text-700);" id="svc-detail-ministry"></div>
+            <div style="background:var(--blue-50); border-radius:var(--r-lg); padding:12px 14px; font-size:0.8rem; color:var(--blue-600); font-weight:700;" id="svc-detail-online"></div>
+        </div>
+        <p style="font-size:0.75rem; color:var(--text-500); line-height:1.6; margin-bottom:20px;">
+            This service is provided by the Government of Nepal. Visit the official portal or your nearest district administration office to apply. Your Nagarik App ID and Citizenship number will be required.
+        </p>
+        <button class="btn-submit" onclick="closeModal('modal-service-detail')">Close</button>
+    </div>
+</div>
+
+<!-- Link Document -->
+<div class="modal-overlay" id="modal-link-doc">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-link-doc')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">🔗 Link New Document</div>
+        <form onsubmit="handleLinkDoc(event)">
+            <div class="form-group">
+                <label class="form-label">Document Type</label>
+                <select id="link-type" class="form-control" required>
+                    <option>e-Passport</option>
+                    <option>Voter ID Card</option>
+                    <option>Health Insurance Card</option>
+                    <option>SSF Card</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Registration / Reference Number</label>
+                <input type="text" id="link-number" class="form-control"
+                       placeholder="Enter document number…" required>
+            </div>
+            <button type="submit" class="btn-submit">Verify & Link</button>
+        </form>
+    </div>
+<!-- Utility / Bill Payment Modal -->
+<div class="modal-overlay" id="modal-pay-utility">
+    <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <button class="modal-close" onclick="closeModal('modal-pay-utility')"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-title">💳 महसुल तथा कर भुक्तानी (Bill Payment)</div>
+        <form onsubmit="handlePayUtility(event)">
+            <div class="form-group">
+                <label class="form-label">Service Type</label>
+                <select id="pay-type" class="form-control" required>
+                    <option value="NEA Electricity">NEA Electricity (बिजुली)</option>
+                    <option value="Khanepani Water">KUKL Khanepani (खानेपानी)</option>
+                    <option value="Vehicle Tax">Vehicle Road Tax (सवारी कर)</option>
+                    <option value="Gaupalika Tax">Gaupalika Property Tax (घरजग्गा कर)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Consumer ID / Customer No.</label>
+                <input type="text" id="pay-consumer-id" class="form-control" placeholder="e.g. 019.28.481" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Amount (NPR)</label>
+                <input type="number" id="pay-amount" class="form-control" placeholder="e.g. 1450" required>
+            </div>
+            <button type="submit" class="btn-submit">Proceed to Pay</button>
+        </form>
+    </div>
+</div>
+
+</div><!-- /phone-wrapper -->
+
+<script src="app.js"></script>
+</body>
+</html>
+
