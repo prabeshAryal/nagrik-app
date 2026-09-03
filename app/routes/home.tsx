@@ -1,19 +1,23 @@
-import { env } from "cloudflare:workers";
-
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Link } from "react-router";
+import { useState } from "react";
+import { CopyButton, Icon, Modal, ServiceCard } from "../components";
+import { featuredIds, services } from "../data";
+import { useApp } from "../app-context";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+export function meta({}:Route.MetaArgs){return [{title:"Nagarik | Nepal's citizen portal"},{name:"description",content:"One secure place for Nepal government services, documents and payments."}]}
 
-export function loader() {
-  return { message: env.VALUE_FROM_CLOUDFLARE };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+export default function Home(){
+ const {privacy,setPrivacy,applications,documents,academicRecords,paidBills}=useApp();const [share,setShare]=useState(false);const featured=featuredIds.slice(0,6).map(id=>services.find(s=>s.id===id)!).filter(Boolean);const paymentDue=[{id:"nea",n:1840},{id:"kukl",n:650},{id:"vehicle",n:600}].filter(x=>!paidBills.includes(x.id)).reduce((a,x)=>a+x.n,0);
+ return <div className="page home-page">
+  <section className="mobile-welcome"><div><p className="eyebrow">नमस्कार · GOOD AFTERNOON</p><h1>Prabin Shrestha</h1></div><Link to="/profile" className="home-avatar"><img src="/avatar.jpg" alt="Prabin Shrestha" /></Link></section>
+  <section className="home-dashboard">
+   <div className="citizen-card"><header><span className="nepal-flag-mark"><i/><i/></span><div><small>नेपाल सरकार · GOVERNMENT OF NEPAL</small><b>नागरिक परिचय</b></div><button className="icon-button card-eye" onClick={()=>setPrivacy(!privacy)} aria-label="Show or hide personal numbers"><Icon name={privacy?"eyeoff":"eye"}/></button></header><div className="citizen-body"><div className="citizen-photo"><img src="/avatar.jpg" alt="Prabin Shrestha" /><span><Icon name="shield" size={13}/> VERIFIED</span></div><div className="citizen-person"><small>FULL NAME</small><h2>Prabin Shrestha</h2><p>प्रबिन श्रेष्ठ</p><dl><div><dt>National ID</dt><dd>{privacy?"••• ••• •••":"983 472 810"}{!privacy&&<CopyButton value="983472810"/>}</dd></div><div><dt>Citizenship no.</dt><dd>{privacy?"•• •• •• •••••":"27-01-75-08421"}{!privacy&&<CopyButton value="27-01-75-08421"/>}</dd></div></dl></div></div><button className="citizen-share" onClick={()=>setShare(true)}><span className="qr-symbol">▦</span><span><b>Share verified identity</b><small>Choose fields · QR expires in 10 minutes</small></span><Icon name="chevron"/></button></div>
+   <div className="home-actions"><Link to="/education-records"><span className="action-icon blue"><Icon name="file"/></span><span><b>Education records</b><small>{academicRecords.length} synchronized qualifications</small></span><Icon name="chevron"/></Link><Link to="/documents"><span className="action-icon red"><Icon name="wallet"/></span><span><b>Document wallet</b><small>{documents.length} linked documents</small></span><Icon name="chevron"/></Link><Link to="/activity"><span className="action-icon navy"><Icon name="activity"/></span><span><b>My applications</b><small>{applications.length} service requests</small></span><Icon name="chevron"/></Link><Link to="/payments"><span className="action-icon green"><Icon name="card"/></span><span><b>Payments</b><small>रू {paymentDue.toLocaleString()} currently due</small></span><Icon name="chevron"/></Link></div>
+  </section>
+  <section className="civic-banner"><span className="banner-mark">न</span><div><p className="eyebrow">NEW NATIONAL SERVICE</p><h2>All academic certificates, in one verified wallet</h2><p>Synchronize degrees and diplomas from recognized universities, boards, and technical institutions. Share an issuer-verified e-diploma with a secure QR.</p><Link className="button banner-button" to="/education-records">Open education records <Icon name="arrow" size={18}/></Link></div><div className="banner-certificate"><span>नेपाल सरकार</span><b>e-DIPLOMA</b><i>QR</i><small>ISSUER VERIFIED</small></div></section>
+  <section className="section services-section"><div className="section-heading"><div><p className="eyebrow">SERVICES FOR YOU</p><h2>Popular government services</h2></div><Link to="/services">See all {services.length} services <Icon name="arrow" size={18}/></Link></div><div className="service-grid featured">{featured.map(s=><ServiceCard service={s} key={s.id}/>)}</div></section>
+  <section className="home-lower"><div className="progress-card"><div className="section-heading compact"><div><p className="eyebrow">CURRENT APPLICATION</p><h2>Passport renewal</h2></div><span className="status in-review">In review</span></div><div className="progress-track"><span style={{width:"64%"}}/></div><div className="progress-steps"><span className="done">Submitted</span><span className="current">Verification</span><span>Decision</span></div><Link className="text-button" to="/activity">Track application <Icon name="arrow" size={18}/></Link></div><div className="help-card"><span className="action-icon red"><Icon name="help"/></span><div><p className="eyebrow">NAGARIK SUPPORT</p><h2>Need help with a service?</h2><p>Call the government helpdesk at <b>1102</b>, Sunday to Friday.</p><Link to="/support">Visit help centre <Icon name="arrow" size={18}/></Link></div></div></section>
+  <Modal open={share} onClose={()=>setShare(false)} title="Share verified identity"><div className="share-sheet"><div className="qr-large" aria-label="Demo QR code"><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/></div><p>This QR shares your name, photo, and National ID validity for 10 minutes. Numbers remain hidden.</p><div className="consent-row"><Icon name="shield"/><span><b>Consent protected</b><small>One verification only · access is recorded</small></span></div><button className="button primary full" onClick={()=>setShare(false)}>Done</button></div></Modal>
+ </div>
 }

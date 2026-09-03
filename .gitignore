@@ -13,5 +13,10 @@
 .dev.vars*
 worker-configuration.d.ts
 
+# Local visual verification artifacts
+/.chrome-test/
+/home-*.png
+/review-*.png
+
 !.dev.vars.example
 !.env.example
