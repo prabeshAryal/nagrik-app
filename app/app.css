@@ -4030,19 +4030,6 @@ body {
     min-width: 0;
 }
 
-.dept-badge {
-    font-size: 8.5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--q-color-primary);
-    background: #eaf1fb;
-    padding: 3px 7px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 4px;
-}
-
 .dept-hub-title h3 {
     margin: 0;
     font-size: 16.5px;
@@ -4067,33 +4054,24 @@ body {
 .dept-hub-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-top: 12px;
     margin-top: 4px;
     border-top: 1px solid var(--line);
-}
-
-.dept-service-count {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--q-color-primary);
-    background: #eaf1fb;
-    padding: 4px 9px;
-    border-radius: 6px;
 }
 
 .dept-explore-action {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     color: var(--q-color-primary);
     transition: transform var(--motion-fast);
 }
 
 .dept-hub-card:hover .dept-explore-action {
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
 /* Single Department Detail View */

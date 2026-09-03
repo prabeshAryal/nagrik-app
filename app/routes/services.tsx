@@ -122,7 +122,7 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Inside Department View (when an authority is clicked) */}
+      {/* Inside Department View (Minimalist & Clean) */}
       {activeHub ? (
         <div className="dept-detail-view">
           <div className="dept-hero-banner">
@@ -130,16 +130,15 @@ export default function Services() {
               type="button"
               className="back-link"
               onClick={() => setSelectedHub(null)}
-              style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 14 }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 12 }}
             >
               <Icon name="arrow" size={16} /> Back to all authorities
             </button>
             <div className="dept-hero-content">
               <span className={`dept-icon-large ${activeHub.theme}`}>
-                <Icon name={activeHub.iconName} size={30} />
+                <Icon name={activeHub.iconName} size={28} />
               </span>
               <div>
-                <span className="dept-badge">{activeHub.badge}</span>
                 <h2>{activeHub.name}</h2>
                 <p className="nepali-sub">{activeHub.nepali}</p>
                 <p className="dept-desc">{activeHub.tagline}</p>
@@ -168,7 +167,6 @@ export default function Services() {
                       </small>
                     </div>
                     <span className="service-row-fee">{s.fee}</span>
-                    <span className="service-row-tag">{s.type}</span>
                     <Icon name="chevron" size={16} />
                   </Link>
                 ))}
@@ -183,7 +181,7 @@ export default function Services() {
           </div>
         </div>
       ) : (
-        /* Authority Directory Grid: Clean Logo + Text + Services Count, no expanded list */
+        /* Authority Directory Grid: Pure Minimalist Cards (Logo + Name + Tagline + Open Action) */
         <div className="dept-directory-grid">
           {hubData.length > 0 ? (
             hubData.map((hub) => (
@@ -202,7 +200,6 @@ export default function Services() {
                     <Icon name={hub.iconName} size={24} />
                   </span>
                   <div className="dept-hub-title">
-                    <span className="dept-badge">{hub.badge}</span>
                     <h3>{hub.name}</h3>
                     <p className="nepali-sub">{hub.nepali}</p>
                   </div>
@@ -211,7 +208,6 @@ export default function Services() {
                 <p className="dept-hub-tagline">{hub.tagline}</p>
 
                 <footer className="dept-hub-footer">
-                  <span className="dept-service-count">{hub.allServices.length} services inside</span>
                   <span className="dept-explore-action">
                     Open Department <Icon name="arrow" size={14} />
                   </span>
