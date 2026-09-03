@@ -3974,3 +3974,315 @@ body {
     display: block;
     border-radius: inherit;
 }
+
+/* Hierarchical Department Hubs & Directory */
+.dept-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 18px;
+}
+
+.dept-hub-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast);
+}
+
+.dept-hub-card:hover {
+    border-color: #a5c2e8;
+    box-shadow: 0 6px 20px rgba(16, 76, 145, 0.08);
+}
+
+.dept-hub-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.dept-hub-glyph {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.dept-hub-glyph.blue, .dept-icon-large.blue { background: var(--q-color-primary); }
+.dept-hub-glyph.teal, .dept-icon-large.teal { background: var(--q-color-secondary); }
+.dept-hub-glyph.purple, .dept-icon-large.purple { background: var(--q-color-accent); }
+.dept-hub-glyph.green, .dept-icon-large.green { background: var(--q-color-positive); }
+.dept-hub-glyph.red, .dept-icon-large.red { background: var(--q-color-negative); }
+.dept-hub-glyph.amber, .dept-icon-large.amber { background: var(--q-color-warning); color: #222; }
+.dept-hub-glyph.navy, .dept-icon-large.navy { background: var(--navy); }
+
+.dept-hub-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.dept-badge {
+    font-size: 8.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--q-color-primary);
+    background: #eaf1fb;
+    padding: 3px 7px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.dept-hub-title h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.25;
+}
+
+.nepali-sub {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 3px 0 0;
+}
+
+.dept-explore-btn {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--q-color-primary);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    transition: background var(--motion-fast);
+}
+
+.dept-explore-btn:hover {
+    background: #eaf1fb;
+    border-color: var(--q-color-primary);
+}
+
+.dept-hub-tagline {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.dept-sub-services {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-top: 1px solid var(--line);
+    padding-top: 13px;
+    margin-top: auto;
+}
+
+.dept-service-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--paper);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+}
+
+.dept-service-pill:hover {
+    background: #fff;
+    border-color: #bed1e8;
+    transform: translateX(3px);
+}
+
+.pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--q-color-primary);
+    flex-shrink: 0;
+}
+
+.pill-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pill-text b {
+    font-size: 12.5px;
+    color: var(--ink);
+}
+
+.pill-text small {
+    font-size: 10.5px;
+    color: var(--muted);
+}
+
+.dept-service-pill .icon {
+    color: var(--q-color-primary);
+    opacity: 0.7;
+}
+
+/* Single Department Detail View */
+.dept-detail-view {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dept-hero-banner {
+    background: linear-gradient(135deg, var(--q-color-primary) 0%, var(--navy) 100%);
+    color: #fff;
+    border-radius: var(--r);
+    padding: 28px 32px;
+}
+
+.dept-hero-banner .back-link {
+    color: #cde0f7;
+}
+
+.dept-hero-banner .back-link:hover {
+    color: #fff;
+}
+
+.dept-hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dept-icon-large {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.dept-hero-content h2 {
+    font-size: 26px;
+    margin: 6px 0 2px;
+    color: #fff;
+}
+
+.dept-hero-content .nepali-sub {
+    color: #d2e4fa;
+    font-size: 14px;
+}
+
+.dept-desc {
+    color: #c3d9f5;
+    font-size: 13.5px;
+    margin-top: 6px;
+}
+
+/* Home Department Directory Grid */
+.home-dept-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.home-dept-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.home-dept-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.home-dept-header h3 {
+    font-size: 14px;
+    margin: 2px 0 0;
+    color: var(--ink);
+}
+
+.home-dept-header small {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.home-dept-link {
+    margin-left: auto;
+    color: var(--muted);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+}
+
+.home-dept-link:hover {
+    background: #eaf1fb;
+    color: var(--q-color-primary);
+}
+
+.home-dept-services {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+}
+
+.home-service-chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: var(--paper);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    transition: background var(--motion-fast);
+}
+
+.home-service-chip:hover {
+    background: #eaf1fb;
+    color: var(--q-color-primary);
+}
+
+@media(max-width: 1024px) {
+    .home-dept-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .home-dept-grid {
+        grid-template-columns: 1fr;
+    }
+    .dept-directory-grid {
+        grid-template-columns: 1fr;
+    }
+    .dept-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
