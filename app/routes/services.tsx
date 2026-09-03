@@ -132,7 +132,7 @@ export default function Services() {
               onClick={() => setSelectedHub(null)}
               style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 12 }}
             >
-              <Icon name="arrow" size={16} /> Back to all authorities
+              ← Back to all authorities
             </button>
             <div className="dept-hero-content">
               <span className={`dept-icon-large ${activeHub.theme}`}>
@@ -166,7 +166,6 @@ export default function Services() {
                         {s.nepali} · {s.agency}
                       </small>
                     </div>
-                    <span className="service-row-fee">{s.fee}</span>
                     <Icon name="chevron" size={16} />
                   </Link>
                 ))}
