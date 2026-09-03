@@ -4304,28 +4304,43 @@ body {
     color: var(--muted);
 }
 
-/* Single-Row Service List Items (Icon + Text in one row) */
+/* Multi-Column Service Row Items (2 columns on desktop, 1 on mobile) */
 .services-row-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (min-width: 1400px) {
+    .services-row-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 860px) {
+    .services-row-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
 }
 
 .service-row-card {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
+    gap: 12px;
+    padding: 14px 16px;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 10px;
-    transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+    transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast), box-shadow var(--motion-fast);
 }
 
 .service-row-card:hover {
-    background: #fcfdfd;
-    border-color: #bed1e8;
-    transform: translateX(2px);
+    background: #fff;
+    border-color: #9cbde4;
+    box-shadow: 0 4px 14px rgba(16, 76, 145, 0.08);
+    transform: translateY(-2px);
 }
 
 .service-row-icon {
