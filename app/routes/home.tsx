@@ -136,25 +136,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Verified Academic Banner */}
-      <section className="civic-banner">
-        <span className="banner-mark">न</span>
+      {/* Prime Minister Disaster Relief Fund Banner */}
+      <section className="civic-banner pmdrf-banner">
+        <span className="banner-mark">रा</span>
         <div>
-          <p className="eyebrow">NEW NATIONAL SERVICE</p>
-          <h2>All academic certificates, in one verified wallet</h2>
+          <p className="eyebrow">NATIONAL CITIZEN SOLIDARITY</p>
+          <h2>Prime Minister Disaster Relief Fund (PMDRF)</h2>
           <p>
-            Synchronize degrees and diplomas from recognized universities, boards, and technical institutions. Share an
-            issuer-verified e-diploma with a secure QR.
+            Support citizens and communities affected by natural disasters, floods, landslides, and emergencies across
+            Nepal. Contribute directly to the official Prime Minister's Disaster Relief Fund.
           </p>
-          <Link className="button banner-button" to="/education-records">
-            Open education records <Icon name="arrow" size={18} />
-          </Link>
+          <a
+            className="button banner-button"
+            href="https://pmdrf.prabe.sh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Support PMDRF Relief Fund <Icon name="arrow" size={18} />
+          </a>
         </div>
-        <div className="banner-certificate">
+        <div className="banner-certificate pmdrf-badge">
           <span>नेपाल सरकार</span>
-          <b>e-DIPLOMA</b>
-          <i>QR</i>
-          <small>ISSUER VERIFIED</small>
+          <b>PMDRF</b>
+          <i>राहत</i>
+          <small>DISASTER RELIEF</small>
         </div>
       </section>
 
