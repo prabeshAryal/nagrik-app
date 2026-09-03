@@ -6,8 +6,19 @@ import { Icon, PageHeader } from "../components";
 export default function Services() {
   const [params, setParams] = useSearchParams();
   const [query, setQuery] = useState(params.get("q") || "");
-  const [selectedHub, setSelectedHub] = useState<string | null>(params.get("dept") || null);
+  const selectedHub = params.get("dept") || null;
 
+  const setSelectedHub = (hubId: string | null) => {
+    const p = new URLSearchParams(params);
+    if (hubId) {
+      p.set("dept", hubId);
+    } else {
+      p.delete("dept");
+    }
+    setParams(p);
+  };
+
+  // Filter hubs and services based on search query
   const hubData = useMemo(() => {
     return departmentHubs
       .map((hub) => {
@@ -94,12 +105,7 @@ export default function Services() {
           <button
             type="button"
             className={!selectedHub ? "active" : ""}
-            onClick={() => {
-              setSelectedHub(null);
-              const p = new URLSearchParams(params);
-              p.delete("dept");
-              setParams(p);
-            }}
+            onClick={() => setSelectedHub(null)}
           >
             All Authorities ({departmentHubs.length})
           </button>
@@ -108,32 +114,22 @@ export default function Services() {
               type="button"
               key={hub.id}
               className={selectedHub === hub.id ? "active" : ""}
-              onClick={() => {
-                setSelectedHub(hub.id);
-                const p = new URLSearchParams(params);
-                p.set("dept", hub.id);
-                setParams(p);
-              }}
+              onClick={() => setSelectedHub(hub.id)}
             >
-              {hub.name.split(" (")[0]}
+              {hub.name}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Detailed Single Department View */}
+      {/* Inside Department View (when an authority is clicked) */}
       {activeHub ? (
         <div className="dept-detail-view">
           <div className="dept-hero-banner">
             <button
               type="button"
               className="back-link"
-              onClick={() => {
-                setSelectedHub(null);
-                const p = new URLSearchParams(params);
-                p.delete("dept");
-                setParams(p);
-              }}
+              onClick={() => setSelectedHub(null)}
               style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 14 }}
             >
               <Icon name="arrow" size={16} /> Back to all authorities
@@ -167,7 +163,9 @@ export default function Services() {
                     </span>
                     <div className="service-row-main">
                       <b>{s.name}</b>
-                      <small className="nepali">{s.nepali} · {s.agency}</small>
+                      <small className="nepali">
+                        {s.nepali} · {s.agency}
+                      </small>
                     </div>
                     <span className="service-row-fee">{s.fee}</span>
                     <span className="service-row-tag">{s.type}</span>
@@ -185,61 +183,45 @@ export default function Services() {
           </div>
         </div>
       ) : (
-        /* Hierarchical Department Directory with Expanded Row Items */
+        /* Authority Directory Grid: Clean Logo + Text + Services Count, no expanded list */
         <div className="dept-directory-grid">
           {hubData.length > 0 ? (
             hubData.map((hub) => (
-              <div className="dept-hub-card" key={hub.id}>
+              <div
+                className="dept-hub-card clickable"
+                key={hub.id}
+                onClick={() => setSelectedHub(hub.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") setSelectedHub(hub.id);
+                }}
+              >
                 <header className="dept-hub-header">
                   <span className={`dept-hub-glyph ${hub.theme}`}>
-                    <Icon name={hub.iconName} size={22} />
+                    <Icon name={hub.iconName} size={24} />
                   </span>
                   <div className="dept-hub-title">
                     <span className="dept-badge">{hub.badge}</span>
                     <h3>{hub.name}</h3>
                     <p className="nepali-sub">{hub.nepali}</p>
                   </div>
-                  <button
-                    type="button"
-                    className="dept-explore-btn"
-                    onClick={() => {
-                      setSelectedHub(hub.id);
-                      const p = new URLSearchParams(params);
-                      p.set("dept", hub.id);
-                      setParams(p);
-                    }}
-                    aria-label={`View ${hub.name}`}
-                  >
-                    <span>{hub.allServices.length} services</span>
-                    <Icon name="chevron" size={16} />
-                  </button>
                 </header>
 
                 <p className="dept-hub-tagline">{hub.tagline}</p>
 
-                {/* Sub-services compact 1-row items */}
-                <div className="dept-sub-services">
-                  {hub.services.map((s) => (
-                    <Link
-                      to={`/services/${s.id}`}
-                      key={s.id}
-                      className="dept-service-pill"
-                    >
-                      <span className="pill-dot" />
-                      <div className="pill-text">
-                        <b>{s.name}</b>
-                        <small>{s.nepali}</small>
-                      </div>
-                      <Icon name="arrow" size={14} />
-                    </Link>
-                  ))}
-                </div>
+                <footer className="dept-hub-footer">
+                  <span className="dept-service-count">{hub.allServices.length} services inside</span>
+                  <span className="dept-explore-action">
+                    Open Department <Icon name="arrow" size={14} />
+                  </span>
+                </footer>
               </div>
             ))
           ) : (
             <div className="empty-state">
               <Icon name="search" size={36} />
-              <h2>No matching services or departments</h2>
+              <h2>No matching authorities found</h2>
               <p>Try searching for a different keyword like "Citizenship", "NID", "Lalpurja", or "Tax".</p>
               <button
                 type="button"
@@ -247,7 +229,6 @@ export default function Services() {
                 onClick={() => {
                   setQuery("");
                   setSelectedHub(null);
-                  setParams({});
                 }}
               >
                 Reset all filters

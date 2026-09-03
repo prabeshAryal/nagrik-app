@@ -37,7 +37,7 @@ export const services: Service[] = raw.map(([id,name,nepali,category,agency,type
 export const departmentHubs = [
   {
     id: "dao",
-    name: "District Administration (DAO)",
+    name: "District Administration",
     nepali: "जिल्ला प्रशासन कार्यालय",
     tagline: "Citizenship, Passport, NID & Identity verification",
     badge: "Primary Identity",
@@ -57,7 +57,7 @@ export const departmentHubs = [
   },
   {
     id: "malpot",
-    name: "Land Revenue & Survey (Malpot)",
+    name: "Land & Malpot",
     nepali: "भूमिसुधार तथा मालपोत",
     tagline: "Lalpurja ownership, cadastral maps, land tax & rokkha",
     badge: "Land & Maps",
@@ -67,7 +67,7 @@ export const departmentHubs = [
   },
   {
     id: "yatayat",
-    name: "Transport Management (Yatayat)",
+    name: "Transport & License",
     nepali: "यातायात व्यवस्था विभाग",
     tagline: "Smart driving license, vehicle tax, bluebook & plates",
     badge: "Driving & Vehicles",
@@ -77,7 +77,7 @@ export const departmentHubs = [
   },
   {
     id: "revenue",
-    name: "Inland Revenue & Tax (IRD)",
+    name: "Tax & Inland Revenue",
     nepali: "आन्तरिक राजस्व विभाग",
     tagline: "Personal PAN, income tax filing & clearance certificates",
     badge: "PAN & Tax",
@@ -87,8 +87,8 @@ export const departmentHubs = [
   },
   {
     id: "police",
-    name: "Nepal Police & Security",
-    nepali: "नेपाल प्रहरी",
+    name: "Police & Security",
+    nepali: "नेपाल प्रहरी तथा सुरक्षा",
     tagline: "Police Clearance Certificate (PCC) & cybercrime reports",
     badge: "Police & Safety",
     iconName: "shield" as const,
@@ -97,7 +97,7 @@ export const departmentHubs = [
   },
   {
     id: "education",
-    name: "Education & Universities",
+    name: "Education & Exams",
     nepali: "शिक्षा, परीक्षा तथा बोर्ड",
     tagline: "SEE marksheet, NEB Class 12, foreign study NOC & TU",
     badge: "Academics & NOC",
@@ -107,7 +107,7 @@ export const departmentHubs = [
   },
   {
     id: "utilities",
-    name: "Utilities & Bill Settlements",
+    name: "Utilities & Bills",
     nepali: "सार्वजनिक महसुल तथा भुक्तानी",
     tagline: "Electricity (NEA), drinking water (KUKL) & IMEI MDMS",
     badge: "Bills & Pay",
@@ -117,7 +117,7 @@ export const departmentHubs = [
   },
   {
     id: "employment",
-    name: "Labor, SSF & Social Security",
+    name: "Labor & Social Security",
     nepali: "सामाजिक सुरक्षा तथा श्रम",
     tagline: "SSF contributions, foreign labor permits & allowances",
     badge: "SSF & Labour",

@@ -3986,16 +3986,19 @@ body {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r);
-    padding: 22px;
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
+    cursor: pointer;
+    text-align: left;
     transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast);
 }
 
 .dept-hub-card:hover {
-    border-color: #a5c2e8;
-    box-shadow: 0 6px 20px rgba(16, 76, 145, 0.08);
+    border-color: #9cbde4;
+    box-shadow: 0 8px 24px rgba(16, 76, 145, 0.1);
+    transform: translateY(-2px);
 }
 
 .dept-hub-header {
@@ -4005,8 +4008,8 @@ body {
 }
 
 .dept-hub-glyph {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
     border-radius: 12px;
     display: grid;
     place-items: center;
@@ -4037,12 +4040,12 @@ body {
     padding: 3px 7px;
     border-radius: 4px;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .dept-hub-title h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 16.5px;
     color: var(--ink);
     line-height: 1.25;
 }
@@ -4054,86 +4057,43 @@ body {
     margin: 3px 0 0;
 }
 
-.dept-explore-btn {
-    border: 1px solid var(--line);
-    background: var(--paper);
-    color: var(--q-color-primary);
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-    transition: background var(--motion-fast);
-}
-
-.dept-explore-btn:hover {
-    background: #eaf1fb;
-    border-color: var(--q-color-primary);
-}
-
 .dept-hub-tagline {
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--muted);
     line-height: 1.5;
     margin: 0;
 }
 
-.dept-sub-services {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    border-top: 1px solid var(--line);
-    padding-top: 13px;
-    margin-top: auto;
-}
-
-.dept-service-pill {
+.dept-hub-footer {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    background: var(--paper);
-    border-radius: 8px;
-    border: 1px solid transparent;
-    transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+    justify-content: space-between;
+    padding-top: 12px;
+    margin-top: 4px;
+    border-top: 1px solid var(--line);
 }
 
-.dept-service-pill:hover {
-    background: #fff;
-    border-color: #bed1e8;
-    transform: translateX(3px);
-}
-
-.pill-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--q-color-primary);
-    flex-shrink: 0;
-}
-
-.pill-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.pill-text b {
-    font-size: 12.5px;
-    color: var(--ink);
-}
-
-.pill-text small {
-    font-size: 10.5px;
-    color: var(--muted);
-}
-
-.dept-service-pill .icon {
+.dept-service-count {
+    font-size: 12px;
+    font-weight: 700;
     color: var(--q-color-primary);
-    opacity: 0.7;
+    background: #eaf1fb;
+    padding: 4px 9px;
+    border-radius: 6px;
+}
+
+.dept-explore-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--q-color-primary);
+    transition: transform var(--motion-fast);
+}
+
+.dept-hub-card:hover .dept-explore-action {
+    transform: translateX(3px);
 }
 
 /* Single Department Detail View */
