@@ -65,20 +65,6 @@ export default function Documents() {
         <div className="document-grid" ref={scrollRef} onScroll={handleScroll}>
           {documents.map((d, i) => (
             <article className={`document-card tone-${i % 4}`} key={d.id}>
-              {/* Card Holographic Emblem & Chip */}
-              <div className="doc-top">
-                <div className="doc-emblem-badge">
-                  <span className="emblem-seal">नेपाल</span>
-                  <div className="smart-chip">
-                    <span />
-                    <span />
-                  </div>
-                </div>
-                <span className={`status-badge ${d.status.toLowerCase()}`}>
-                  <Icon name="shield" size={12} /> {d.status}
-                </span>
-              </div>
-
               {/* Card Title & Nepali Subtitle */}
               <div className="doc-body">
                 <p className="nepali-title">{d.nepali}</p>
