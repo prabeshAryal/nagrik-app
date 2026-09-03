@@ -138,9 +138,7 @@ export default function Home() {
 
       {/* Prime Minister Disaster Relief Fund Banner */}
       <section className="civic-banner pmdrf-banner">
-        <span className="banner-mark">रा</span>
         <div>
-          <p className="eyebrow">NATIONAL CITIZEN SOLIDARITY</p>
           <h2>Prime Minister Disaster Relief Fund (PMDRF)</h2>
           <p>
             Support citizens and communities affected by natural disasters, floods, landslides, and emergencies across
@@ -155,11 +153,12 @@ export default function Home() {
             Support PMDRF Relief Fund <Icon name="arrow" size={18} />
           </a>
         </div>
-        <div className="banner-certificate pmdrf-badge">
-          <span>नेपाल सरकार</span>
-          <b>PMDRF</b>
-          <i>राहत</i>
-          <small>DISASTER RELIEF</small>
+        <div className="pmdrf-emblem-wrap">
+          <img
+            src="https://pmdrf.nchl.com.np/Images/Emblem_of_Nepal.png"
+            alt="Emblem of Nepal"
+            className="pmdrf-emblem-img"
+          />
         </div>
       </section>
 
