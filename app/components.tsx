@@ -9,6 +9,18 @@ const paths:Record<IconName,React.ReactNode>={
 };
 export function Icon({name,size=22}:{name:IconName;size?:number}){return <svg className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>}
 
+export function NepalFlag({size=26}:{size?:number}){
+  return (
+    <svg width={size} height={Math.round(size*1.22)} viewBox="0 0 100 122" fill="none" xmlns="http://www.w3.org/2000/svg" className="nepal-flag-svg" aria-label="Flag of Nepal">
+      <path d="M4 4V118H96L36 66H84L4 4Z" fill="#003580" stroke="#003580" strokeWidth="4" strokeLinejoin="round" />
+      <path d="M12 14V110H80L32 66H70L12 14Z" fill="#DC143C" />
+      <path d="M26 38C32.5 38 38 33 38 26.5C38 21.8 35.2 17.8 31.2 16C30.8 18.2 28.8 20 26 20C23.2 20 21.2 18.2 20.8 16C16.8 17.8 14 21.8 14 26.5C14 33 19.5 38 26 38Z" fill="#FFFFFF" />
+      <circle cx="28" cy="86" r="6" fill="#FFFFFF" />
+      <path d="M28 74L30 80H26L28 74ZM28 98L26 92H30L28 98ZM16 86L22 84V88L16 86ZM40 86L34 88V84L40 86ZM19.5 77.5L25 80.5L23 83.5L19.5 77.5ZM36.5 94.5L31 91.5L33 88.5L36.5 94.5ZM19.5 94.5L23 88.5L25 91.5L19.5 94.5ZM36.5 77.5L33 83.5L31 80.5L36.5 77.5Z" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
 export function NepalMark(){return <div className="brand"><span className="brand-seal">न</span><span><b>नागरिक</b><small>ONE NEPAL · ONE PORTAL</small></span></div>}
 export function PageHeader({eyebrow,title,copy,action}:{eyebrow:string;title:string;copy?:string;action?:React.ReactNode}){return <header className="page-header"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{copy&&<p className="page-copy">{copy}</p>}</div>{action}</header>}
 export function Modal({open,onClose,title,children,wide=false}:{open:boolean;onClose:()=>void;title:string;children:React.ReactNode;wide?:boolean}){useEffect(()=>{const k=(e:KeyboardEvent)=>e.key==="Escape"&&onClose();if(open)document.addEventListener("keydown",k);return()=>document.removeEventListener("keydown",k)},[open,onClose]);if(!open)return null;return <div className="modal-backdrop" onMouseDown={e=>e.target===e.currentTarget&&onClose()}><section className={`modal ${wide?"wide":""}`} role="dialog" aria-modal="true"><header><div><p className="eyebrow">SECURE NAGARIK WORKFLOW</p><h2>{title}</h2></div><button className="icon-button" onClick={onClose} aria-label="Close"><Icon name="close"/></button></header>{children}</section></div>}
