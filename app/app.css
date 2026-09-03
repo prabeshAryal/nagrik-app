@@ -1,18 +1,39 @@
 @import "tailwindcss" source(".");
 
 :root {
-    --navy: #101d35;
-    --red: #bd1735;
-    --paper: #f3f0e8;
-    --paper2: #e8e4da;
-    --ink: #182130;
-    --muted: #687181;
-    --line: #d4d0c7;
-    --green: #176a50;
-    --blue: #245286;
-    --surface: #faf8f2;
+    --q-color-primary: #104c91;
+    --q-color-secondary: #26a69a;
+    --q-color-accent: #9c27b0;
+    --q-color-positive: #21ba45;
+    --q-color-negative: #c10015;
+    --q-color-info: #31ccec;
+    --q-color-warning: #f2c037;
+    --q-color-dark: #1d1d1d;
+
+    --q-size-xs: 0;
+    --q-size-sm: 600px;
+    --q-size-md: 1024px;
+    --q-size-lg: 1440px;
+    --q-size-xl: 1920px;
+
+    --primary: var(--q-color-primary);
+    --secondary: var(--q-color-secondary);
+    --accent: var(--q-color-accent);
+    --navy: #0d386d;
+    --blue: #104c91;
+    --red: #c10015;
+    --green: #21ba45;
+    --warning: #f2c037;
+    --info: #31ccec;
+    --dark: #1d1d1d;
+    --paper: #f4f6fb;
+    --paper2: #e9eef6;
+    --ink: #17243a;
+    --muted: #58677b;
+    --line: #dce3ed;
+    --surface: #ffffff;
     --r: 10px;
-    --font: "Manrope", "Noto Sans Devanagari", sans-serif
+    --font: "Plus Jakarta Sans", "Manrope", "Noto Sans Devanagari", sans-serif;
 }
 
 * {
@@ -2489,19 +2510,40 @@ body {
 
 /* 2026 citizen-app visual system */
 :root {
-    --navy: #153b74;
-    --red: #d3133a;
-    --paper: #f4f7fb;
+    --q-color-primary: #104c91;
+    --q-color-secondary: #26a69a;
+    --q-color-accent: #9c27b0;
+    --q-color-positive: #21ba45;
+    --q-color-negative: #c10015;
+    --q-color-info: #31ccec;
+    --q-color-warning: #f2c037;
+    --q-color-dark: #1d1d1d;
+
+    --q-size-xs: 0;
+    --q-size-sm: 600px;
+    --q-size-md: 1024px;
+    --q-size-lg: 1440px;
+    --q-size-xl: 1920px;
+
+    --primary: var(--q-color-primary);
+    --secondary: var(--q-color-secondary);
+    --accent: var(--q-color-accent);
+    --navy: #0d386d;
+    --blue: #104c91;
+    --red: #c10015;
+    --green: #21ba45;
+    --warning: #f2c037;
+    --info: #31ccec;
+    --dark: #1d1d1d;
+    --paper: #f4f6fb;
     --paper2: #e9eef6;
     --ink: #17243a;
     --muted: #58677b;
     --line: #dce3ed;
-    --green: #167457;
-    --blue: #1d5fa9;
-    --surface: #fff;
+    --surface: #ffffff;
     --r: 14px;
     --motion-fast: 140ms;
-    --motion-page: 240ms
+    --motion-page: 240ms;
 }
 
 body {
