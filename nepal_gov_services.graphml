@@ -1,0 +1,1371 @@
+<?xml version="1.0" ?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" for="node" attr.name="name" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="category" for="node" attr.name="category" attr.type="string"/>
+  <key id="description" for="node" attr.name="description" attr.type="string"/>
+  <key id="digitized_status" for="node" attr.name="digitized_status" attr.type="string"/>
+  <key id="nagarik_app" for="node" attr.name="nagarik_app" attr.type="boolean"/>
+  <key id="required_documents" for="node" attr.name="required_documents" attr.type="string"/>
+  <graph id="G" edgedefault="directed">
+    <node id="opmcm">
+      <data key="name">Office of the Prime Minister and Council of Ministers</data>
+      <data key="type">root</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Central executive office coordinating the cabinet, formulating national policies, and overseeing all ministries.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="psc">
+      <data key="name">Public Service Commission (Lok Sewa Aayog)</data>
+      <data key="type">constitutional_body</data>
+      <data key="category">Public Recruitment</data>
+      <data key="description">Constitutional body responsible for conducting recruitment examinations and appointing civil servants.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="lok_sewa_job_application">
+      <data key="name">Lok Sewa Job Application &amp; Registration</data>
+      <data key="type">service</data>
+      <data key="category">Employment &amp; Recruitment</data>
+      <data key="description">Online registration, application submission, and fee payment for federal civil service examinations.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship;Academic Certificates;Character Certificate;Passport Photo;Signature Scan</data>
+    </node>
+    <node id="lok_sewa_exam_schedule_results">
+      <data key="name">Civil Service Exam Schedule and Results Portal</data>
+      <data key="type">service</data>
+      <data key="category">Employment &amp; Recruitment</data>
+      <data key="description">Public portal for checking examination dates, roll numbers, syllabus, written results, and interview calls.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">None</data>
+    </node>
+    <node id="ecn">
+      <data key="name">Election Commission Nepal</data>
+      <data key="type">constitutional_body</data>
+      <data key="category">Democracy &amp; Elections</data>
+      <data key="description">Constitutional body that manages voter registration, conducts federal/provincial/local elections, and regulates political parties.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="voter_registration_biometrics">
+      <data key="name">Voter Registration with Biometrics</data>
+      <data key="type">service</data>
+      <data key="category">Democracy &amp; Elections</data>
+      <data key="description">Pre-registration of voting details online, followed by biometric (fingerprint/photo) collection at district offices.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship Certificate;Proof of Address (if different from citizenship)</data>
+    </node>
+    <node id="check_voter_card_details">
+      <data key="name">Check Voter Card Details &amp; Polling Center</data>
+      <data key="type">service</data>
+      <data key="category">Democracy &amp; Elections</data>
+      <data key="description">Digital inquiry system to view voter ID card status, voting number, and designated polling booth.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Voter ID Number or Citizenship Number</data>
+    </node>
+    <node id="ciaa">
+      <data key="name">Commission for the Investigation of Abuse of Authority (CIAA)</data>
+      <data key="type">constitutional_body</data>
+      <data key="category">Anti-Corruption &amp; Vigilance</data>
+      <data key="description">The apex constitutional body for investigating corruption and abuse of public authority in Nepal.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="report_corruption_bribe">
+      <data key="name">Report Corruption and Abuse of Office</data>
+      <data key="type">service</data>
+      <data key="category">Anti-Corruption &amp; Vigilance</data>
+      <data key="description">Online form and toll-free helpline to register corruption allegations, bribery complaints, and submit supporting evidence.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Evidence documents/media (optional);Complaint letter</data>
+    </node>
+    <node id="hello_sarkar">
+      <data key="name">Hello Sarkar Public Grievance Portal</data>
+      <data key="type">department</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Public grievance redressal system directly monitored by the OPMCM to address citizen complaints.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="register_grievance">
+      <data key="name">Lodge Citizen Grievance</data>
+      <data key="type">service</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Lodge complaints against public agencies, officials, delayed services, or infrastructure issues via web, SMS, phone, or app.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Details of the grievance;Supporting files/photos (optional)</data>
+    </node>
+    <node id="track_grievance">
+      <data key="name">Track Grievance Status</data>
+      <data key="type">service</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Track the action taken on registered complaints using a unique token identifier.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Complaint Token ID</data>
+    </node>
+    <node id="ppmo">
+      <data key="name">Public Procurement Monitoring Office (PPMO)</data>
+      <data key="type">department</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Monitors government procurement, manages the e-GP portal, and standardizes bidding processes.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="egp_contractor_registration">
+      <data key="name">e-GP Contractor/Bidder Registration</data>
+      <data key="type">service</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Online registration of business firms and contractors to bid for government tenders.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Company Registration;Tax Clearance;PAN/VAT Certificate;Bank Guarantee</data>
+    </node>
+    <node id="browse_public_tenders">
+      <data key="name">Browse Public Tenders &amp; Contracts</data>
+      <data key="type">service</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Search, view, and download active public procurement bidding documents and contract awards.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">None</data>
+    </node>
+    <node id="ibn">
+      <data key="name">Investment Board Nepal (IBN)</data>
+      <data key="type">department</data>
+      <data key="category">Investment &amp; Business</data>
+      <data key="description">Government body that facilitates large-scale public-private partnerships (PPP) and foreign direct investment (FDI).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="large_project_fdi_application">
+      <data key="name">Large-Scale Project FDI Approval</data>
+      <data key="type">service</data>
+      <data key="category">Investment &amp; Business</data>
+      <data key="description">Submission and tracking of foreign investment proposals above the threshold for large projects (hydropower, highways, factories).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Project Proposal;Financial Plan;Company Profile;Feasibility Report</data>
+    </node>
+    <node id="nso">
+      <data key="name">National Statistics Office (NSO)</data>
+      <data key="type">department</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Primary statistical body responsible for collection, processing, and analysis of demographic and economic data.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="request_statistical_data">
+      <data key="name">Request Census &amp; Survey Microdata</data>
+      <data key="type">service</data>
+      <data key="category">Governance &amp; Administration</data>
+      <data key="description">Online application for researchers to access official survey microdata, census sheets, or demographic statistics.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Request Letter;Research Proposal;Institution ID</data>
+    </node>
+    <node id="moha">
+      <data key="name">Ministry of Home Affairs</data>
+      <data key="type">ministry</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Responsible for internal security, public order, local administration, disaster management, and immigration.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="nepal_police">
+      <data key="name">Nepal Police</data>
+      <data key="type">department</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Federal law enforcement agency ensuring public safety, crime prevention, and traffic control.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="police_clearance_certificate">
+      <data key="name">Police Clearance Certificate (PCC)</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Online application for Police Character Certificate for job, visa, or studies abroad.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship Certificate;Passport bio-data page;Passport photo;Marriage Certificate (for females if surname changed)</data>
+    </node>
+    <node id="online_crime_reporting">
+      <data key="name">Online Crime and Cybercrime Reporting</data>
+      <data key="type">service</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Portal to report cyber harassment, digital financial fraud, or theft without visiting a station physically.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Incident description;Screenshots/Evidence files;ID Proof</data>
+    </node>
+    <node id="donidcr">
+      <data key="name">Department of National ID and Civil Registration (DoNIDCR)</data>
+      <data key="type">department</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Oversees the National ID system, population registers, and registration of vital events.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="national_id_pre_enrollment">
+      <data key="name">National ID Pre-enrollment &amp; Biometric Booking</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Online pre-registration of demographic data to obtain a registration number and book biometric appointment slots.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Original Citizenship Certificate;Marriage Certificate (if applicable);Birth Certificate (for children)</data>
+    </node>
+    <node id="vital_event_registration">
+      <data key="name">Civil Event Registration (Birth, Marriage, Death, Divorce, Migration)</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Online reporting of vital life events via ward offices to record and issue official registration certificates.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Hospital birth notification/Marriage card/Death report;Citizenship certificates of parties;Migration document</data>
+    </node>
+    <node id="doi">
+      <data key="name">Department of Immigration (DoI)</data>
+      <data key="type">department</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Manages entry, stay, and exit of foreign nationals and regulates border crossings.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="tourist_visa_extension">
+      <data key="name">Online Tourist Visa Extension</data>
+      <data key="type">service</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Online application for foreign tourists to extend their legal stay in Nepal.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Passport scan;Current Visa details;Online payment confirmation</data>
+    </node>
+    <node id="trekking_permit_restricted">
+      <data key="name">Restricted Area Trekking Permit</data>
+      <data key="type">service</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">Issuance of special trekking permits for foreigners seeking to trek in restricted frontier zones (Upper Mustang, Manaslu, Dolpo).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Passport Copy;Valid Visa Copy;Trekking Agency credentials;Authorized Guide details</data>
+    </node>
+    <node id="dao">
+      <data key="name">District Administration Office (DAO)</data>
+      <data key="type">department</data>
+      <data key="category">Security &amp; Civil Administration</data>
+      <data key="description">The administrative office representing the home ministry in each of the 77 districts, issuing identities and managing local security.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="citizenship_certificate_issuance">
+      <data key="name">Citizenship Certificate (Nagarikta) Issuance</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Application and formal physical verification for the issuance of the basic national identity document.</data>
+      <data key="digitized_status">Manual</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Parents' Citizenship Certificates;Local Ward Recommendation;Birth Certificate;Academic certificate (optional)</data>
+    </node>
+    <node id="citizenship_duplicate_issuance">
+      <data key="name">Request Duplicate Citizenship (Pratilipi)</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Application for a duplicate citizenship certificate in case of loss, damage, or correction of the original.</data>
+      <data key="digitized_status">Manual</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Police report of lost card;Ward Recommendation;Copy of original citizenship (if available);Passport Photos</data>
+    </node>
+    <node id="organization_ngo_registration">
+      <data key="name">NGO &amp; Organization Registration and Renewal</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Process for registering and renewing non-profit organizations, social clubs, and NGOs at the district level.</data>
+      <data key="digitized_status">Manual</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Organization Constitution;Founder list &amp; passports;Rent agreement;Police character reports of founders;Ward approval</data>
+    </node>
+    <node id="mof">
+      <data key="name">Ministry of Finance</data>
+      <data key="type">ministry</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Manages treasury operations, prepares annual budget, designs monetary policy targets, and oversees tax policy.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="ird">
+      <data key="name">Inland Revenue Department (IRD)</data>
+      <data key="type">department</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Administers income tax, VAT, excise duty, and generates tax revenues for the state.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="personal_pan_registration">
+      <data key="name">Personal PAN Registration</data>
+      <data key="type">service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Online application for a Permanent Account Number (PAN) required for jobs, banking, and professional work.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship Certificate Copy;Passport Photo;National ID (if available)</data>
+    </node>
+    <node id="income_tax_filing">
+      <data key="name">Income Tax Return Filing (D-1, D-2, D-3)</data>
+      <data key="type">service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Online portal for individuals and entities to declare annual income, calculate tax, and file returns.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">PAN details;Bank accounts;Salary statement/Income evidence;Tax deduction receipts</data>
+    </node>
+    <node id="tax_clearance_certificate">
+      <data key="name">Online Tax Clearance Certificate</data>
+      <data key="type">service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Request and generate a certified document proving all tax liabilities have been resolved for the fiscal year.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">PAN;Tax return submission confirmation;Payment receipt</data>
+    </node>
+    <node id="doc">
+      <data key="name">Department of Customs</data>
+      <data key="type">department</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Enforces customs laws, collects custom duties, and regulates cross-border trade flow.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="exim_code_registration">
+      <data key="name">EXIM Code Registration and Renewal</data>
+      <data key="type">service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Online registration of Export-Import Code (EXIM) mandatory for carrying out international trade.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Company registration certificate;PAN/VAT certificate;Bank guarantee (minimum NPR 3-10 Lakhs);Rent agreement</data>
+    </node>
+    <node id="fcgo">
+      <data key="name">Financial Comptroller General Office (FCGO)</data>
+      <data key="type">department</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Oversees government accounting, budget execution records, internal audit coordination, and civil service pensions.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="government_revenue_epayment">
+      <data key="name">Government Revenue e-Payment Portal</data>
+      <data key="type">service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Unified online platform to pay taxes, service charges, passport fees, and license fees to various offices.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Billing reference code/Voucher</data>
+    </node>
+    <node id="mofa">
+      <data key="name">Ministry of Foreign Affairs</data>
+      <data key="type">ministry</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Implements foreign policy, maintains diplomatic relations, and manages services for citizens traveling or working abroad.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="department_of_passport">
+      <data key="name">Department of Passport (DoP)</data>
+      <data key="type">department</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Designated authority for issuing Machine Readable and Electronic Passports (e-Passports).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="epassport_pre_enrollment">
+      <data key="name">e-Passport Pre-Enrollment &amp; Appointment Booking</data>
+      <data key="type">service</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Mandatory online application form and biometric appointment selection for e-Passport issuance.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">National ID Number (NID);Citizenship Certificate;Old Passport (if renewing);Payment Voucher</data>
+    </node>
+    <node id="passport_status_tracking">
+      <data key="name">Passport Status Tracking</data>
+      <data key="type">service</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Track the print status, dispatch, and delivery location of pre-booked passport applications.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Application Reference Number or Passport Number</data>
+    </node>
+    <node id="consular_services">
+      <data key="name">Department of Consular Services</data>
+      <data key="type">department</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Provides notarization verification, legal document attestation, and coordinates rescue of Nepalese citizens abroad.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="document_attestation">
+      <data key="name">Online Consular Document Attestation</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Submitting personal and academic documents for MoFA attestation prior to abroad use. Verified online via integration with line departments.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Original Document to attest;Notarized translation copy;Citizenship copy;Application voucher</data>
+    </node>
+    <node id="repatriation_and_rescue">
+      <data key="name">Citizen Repatriation and Rescue Coordination</data>
+      <data key="type">service</data>
+      <data key="category">Diplomacy &amp; International Relations</data>
+      <data key="description">Register requests for rescue, legal aid, or repatriation of Nepalese workers stranded, jailed, or in distress abroad.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Passport Copy;Visa/Labor Permit Copy;Description of distress;Employer details</data>
+    </node>
+    <node id="moewri">
+      <data key="name">Ministry of Energy, Water Resources and Irrigation</data>
+      <data key="type">ministry</data>
+      <data key="category">Energy &amp; Infrastructure</data>
+      <data key="description">Manages Nepal's massive hydropower potential, power grid distribution, water resource conservation, and irrigation channels.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="nea">
+      <data key="name">Nepal Electricity Authority (NEA)</data>
+      <data key="type">department</data>
+      <data key="category">Energy &amp; Infrastructure</data>
+      <data key="description">The national utility company responsible for generation, transmission, and distribution of electricity across Nepal.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="electricity_bill_payment">
+      <data key="name">Electricity Bill Inquiry &amp; Payment</data>
+      <data key="type">service</data>
+      <data key="category">Utility Payments</data>
+      <data key="description">Search monthly electricity consumption bills and pay online via multiple digital payment gateways.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">NEA Consumer ID;Counter office name</data>
+    </node>
+    <node id="new_electricity_connection">
+      <data key="name">Apply for New Meter/Connection</data>
+      <data key="type">service</data>
+      <data key="category">Utility Payments</data>
+      <data key="description">Online application for a new electricity connection line or upgrade to 3-phase/industrial connection lines.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Land ownership Lalpurja;Citizenship Certificate;Ward Recommendation;No-Objection statement from neighbor</data>
+    </node>
+    <node id="moid">
+      <data key="name">Ministry of Infrastructure Development</data>
+      <data key="type">ministry</data>
+      <data key="category">Transportation &amp; Infrastructure</data>
+      <data key="description">Develops public road systems, manages transport networks, registers motor vehicles, and licenses drivers.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="dotm">
+      <data key="name">Department of Transport Management (DoTM)</data>
+      <data key="type">department</data>
+      <data key="category">Transportation &amp; Infrastructure</data>
+      <data key="description">Regulates licensing of vehicle drivers, registers private and commercial motor vehicles, and monitors transport operators.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="driving_license_preenrollment">
+      <data key="name">Driving License Application &amp; Exam Slot Booking</data>
+      <data key="type">service</data>
+      <data key="category">Transportation &amp; Infrastructure</data>
+      <data key="description">Apply for a new driving license category, fill out the form online, and book dates for the medical/exam tests.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship copy;Blood Group report;Passport photo;Citizenship original (during test)</data>
+    </node>
+    <node id="driving_license_renewal">
+      <data key="name">Driving License Renewal Application</data>
+      <data key="type">service</data>
+      <data key="category">Transportation &amp; Infrastructure</data>
+      <data key="description">Submit driving license renewal form online, calculate renewal fees, and check pending traffic fines.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Original Driving License;Health Certificate (certified by registered physician);Payment receipt</data>
+    </node>
+    <node id="vehicle_tax_bluebook_renewal">
+      <data key="name">Vehicle Tax and Bluebook Renewal</data>
+      <data key="type">service</data>
+      <data key="category">Utility Payments</data>
+      <data key="description">Check annual vehicle road tax, pay online, and schedule physical bluebook endorsement at transport offices.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Vehicle Bluebook details;Third-party insurance certificate;PAN (for commercial vehicles)</data>
+    </node>
+    <node id="embossed_plate_application">
+      <data key="name">Embossed Number Plate Registration</data>
+      <data key="type">service</data>
+      <data key="category">Transportation &amp; Infrastructure</data>
+      <data key="description">Apply for the mandatory RFID-based embossed number plate for vehicles, submit fees, and book fitment appointment.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Bluebook Copy;Tax Clearance receipt;Citizenship Certificate;Fitment fee voucher</data>
+    </node>
+    <node id="moljpa">
+      <data key="name">Ministry of Law, Justice and Parliamentary Affairs</data>
+      <data key="type">ministry</data>
+      <data key="category">Law &amp; Justice</data>
+      <data key="description">Oversees the judicial system, drafts bills, publishes acts in the Nepal Gazette, and regulates the Notary Public Council.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="notary_public_council">
+      <data key="name">Nepal Notary Public Council</data>
+      <data key="type">department</data>
+      <data key="category">Law &amp; Justice</data>
+      <data key="description">Licensing authority for Notaries Public to translate, authenticate, and verify official citizen documents.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="notarization_services">
+      <data key="name">Notarization &amp; Document Certification</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Formal certification of document photocopies as 'true copies' by a licensed notary public for official applications.</data>
+      <data key="digitized_status">Manual</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Original Document;Photocopy to be certified;ID proof of requestor</data>
+    </node>
+    <node id="document_translation_certified">
+      <data key="name">Certified Document Translation</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Translating official documents (Citizenship, Birth certificates, Marksheets) from Nepali to English by a council-licensed translator.</data>
+      <data key="digitized_status">Manual</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Original Nepali Document;Translator Fee</data>
+    </node>
+    <node id="verify_notary_license">
+      <data key="name">Verify Notary Public License</data>
+      <data key="type">service</data>
+      <data key="category">Law &amp; Justice</data>
+      <data key="description">Search directory to verify if a Notary Public is registered and legally authorized to authenticate documents.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Notary Name or License Number</data>
+    </node>
+    <node id="mosti">
+      <data key="name">Ministry of Science, Technology and Innovation</data>
+      <data key="type">ministry</data>
+      <data key="category">Science &amp; Technology</data>
+      <data key="description">Promotes scientific research, coordinates digital transformation, and formulates cybersecurity/IT frameworks.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="doit">
+      <data key="name">Department of Information Technology (DoIT)</data>
+      <data key="type">department</data>
+      <data key="category">Science &amp; Technology</data>
+      <data key="description">Primary department executing government IT policies, managing the National G-Cloud, and issuing digital signature certificates.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="digital_signature_issuance">
+      <data key="name">Digital Signature Certificate (DSC) Issuance</data>
+      <data key="type">service</data>
+      <data key="category">Science &amp; Technology</data>
+      <data key="description">Issuance of cryptographic digital signature keys to secure online transactions, bidding, and filing for businesses and officials.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship copy;Company Registration (for business keys);Application form;Biometric validation</data>
+    </node>
+    <node id="mowcgmss">
+      <data key="name">Ministry of Women, Children, Gender &amp; Sexual Minorities and Social Security</data>
+      <data key="type">ministry</data>
+      <data key="category">Social Protection &amp; Welfare</data>
+      <data key="description">Ensures the protection of human rights of marginalized genders, children, elder citizens, and implements federal social assistance.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="doss">
+      <data key="name">Department of Social Security</data>
+      <data key="type">department</data>
+      <data key="category">Social Protection &amp; Welfare</data>
+      <data key="description">Coordinates funding, eligibility, and cash transfer channels for citizen social security allowances.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="social_security_allowance_apply">
+      <data key="name">Social Security Allowance Registration</data>
+      <data key="type">service</data>
+      <data key="category">Social Protection &amp; Welfare</data>
+      <data key="description">Apply for senior citizen cash allowance, single women/widow allowance, or disability allowance at the local ward office.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship Certificate;Disability Card (for disability allowance);Proof of age (70+ / 60+ in designated zones);Ward Recommendation</data>
+    </node>
+    <node id="molmcfaga">
+      <data key="name">Ministry of Land Management, Cooperatives, Federal Affairs and General Administration</data>
+      <data key="type">ministry</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Coordinates civil service administration, manages relations with 753 local municipal bodies, oversees land reforms, surveys, and cooperative frameworks.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="dolrm">
+      <data key="name">Department of Land Reform and Management (Land Revenue / Malpot)</data>
+      <data key="type">department</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Responsible for managing land records, land registration, deed execution, property transfers, and land taxation.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="land_ownership_lalpurja_lookup">
+      <data key="name">Land Ownership (Lalpurja) Records Inquiry</data>
+      <data key="type">service</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Online search of land registry records to verify ownership details, plot boundaries, and transaction history.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Lalpurja details (District, VDC/Municipality, Ward, Sheet No, Plot/Kitta No);PAN or Citizenship No</data>
+    </node>
+    <node id="property_mortgage_rokka_fukua">
+      <data key="name">Property Mortgage Registration &amp; Release (Rokka / Fukua)</data>
+      <data key="type">service</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Registration of land mortgage with banks/financial institutions and formal release of land records after loan clearance.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Lalpurja;Citizenship;Bank Loan approval document;Property Valuation report</data>
+    </node>
+    <node id="survey_department">
+      <data key="name">Department of Survey (Napi)</data>
+      <data key="type">department</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Maintains cadastral maps, establishes geodetic reference networks, and defines national boundaries.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="mero_kitta_maps">
+      <data key="name">Mero Kitta Cadastral Map Printing</data>
+      <data key="type">service</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Online platform to view, pay for, and download print-ready cadastral maps (Kitta Kaat) and field books without visiting the Napi office.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Lalpurja details;Citizenship Number;Payment Voucher</data>
+    </node>
+    <node id="local_municipalities">
+      <data key="name">753 Local Municipalities and Rural Wards</data>
+      <data key="type">department</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Decentralized local governments responsible for neighborhood infrastructure, local taxation, and vital recommendation letters.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="local_property_tax_payment">
+      <data key="name">Local Property and Land Tax Payment</data>
+      <data key="type">service</data>
+      <data key="category">Utility Payments</data>
+      <data key="description">Online payment of local municipal property taxes, rental taxes, and land revenue (Malpot tax) via local e-governance systems.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Lalpurja Copy;Previous Tax receipt;PAN (optional)</data>
+    </node>
+    <node id="house_map_approval_naksa">
+      <data key="name">Building Construction Map Approval (Naksa Pass)</data>
+      <data key="type">service</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Electronic building permit system (e-BPS) to submit blueprint maps, get clearances, and obtain construction permission certificates.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Lalpurja;Land Survey map;Cadastral print;Structural blueprints (certified by architect);Citizenship Certificate</data>
+    </node>
+    <node id="wada_sifarish_relationship">
+      <data key="name">Relationship Verification Certificate (Nata Pramanit)</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Official recommendation letter verifying blood relationships between family members (vital for visa applications, property transfer).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship certificates of all members;Birth certificates;Passport size photos;Witness statements</data>
+    </node>
+    <node id="wada_sifarish_income">
+      <data key="name">Annual Income Verification Recommendation</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Local ward recommendation verifying the family's annual income sources (agriculture, business, salary) for scholarship or visa purposes.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Land Lalpurja (for agri income);Salary certificate;Audit reports of business;Tax receipts</data>
+    </node>
+    <node id="mohfh">
+      <data key="name">Ministry of Health and Food Hygiene</data>
+      <data key="type">ministry</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Regulates hospitals, public health targets, medical research, pharmaceutical manufacturing, and ensures food/nutrition safety.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="department_of_health_services">
+      <data key="name">Department of Health Services</data>
+      <data key="type">department</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Executes public health programs, vaccination campaigns, child health initiatives, and oversees government hospitals.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="vaccine_qr_certification">
+      <data key="name">Immunization/Vaccine QR Code Certification</data>
+      <data key="type">service</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Generate digitally verifiable vaccine certificate with a secure QR code (critical for travel and child school admissions).</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Immunization card scan;Citizenship/Passport Copy;Mobile Number</data>
+    </node>
+    <node id="health_insurance_board">
+      <data key="name">Health Insurance Board (HIB)</data>
+      <data key="type">department</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Implements the government-backed social health insurance scheme to guarantee affordable access to medical services.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="health_insurance_enrollment">
+      <data key="name">Health Insurance Enrollment &amp; Renewal</data>
+      <data key="type">service</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Register family members under the national health insurance card, pay premium contributions, and track coverage limits.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship/Birth Certificates of all members;Family photo;Premium payment voucher</data>
+    </node>
+    <node id="moes">
+      <data key="name">Ministry of Education and Sports</data>
+      <data key="type">ministry</data>
+      <data key="category">Education &amp; Sports</data>
+      <data key="description">Formulates educational laws, administers federal exams, regulates higher universities, and supports national sports activities.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="foreign_study_permission">
+      <data key="name">Foreign Study Permission Section (NOC Section)</data>
+      <data key="type">department</data>
+      <data key="category">Education &amp; Sports</data>
+      <data key="description">Verifies students going abroad and issues the mandatory No Objection Letter for foreign currency exchange and visa.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="no_objection_certificate_noc">
+      <data key="name">No Objection Certificate (NOC) for Abroad Studies</data>
+      <data key="type">service</data>
+      <data key="category">Education &amp; Sports</data>
+      <data key="description">Complete online application, document verification, and e-payment to obtain an NOC letter.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Citizenship Certificate;Academic Transcripts (SLC/SEE, +2, or Bachelor's);Offer letter from foreign university;Application fee receipt</data>
+    </node>
+    <node id="curriculum_development_centre">
+      <data key="name">Curriculum Development Centre (CDC)</data>
+      <data key="type">department</data>
+      <data key="category">Education &amp; Sports</data>
+      <data key="description">Formulates school-level curriculum and certifies educational equivalence of foreign school-level boards (like CBSE, GCSE).</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="academic_equivalency_certificate">
+      <data key="name">Educational Degree/Board Equivalency Certificate</data>
+      <data key="type">service</data>
+      <data key="category">Education &amp; Sports</data>
+      <data key="description">Evaluation and formal issuance of equivalency for foreign academic boards/degrees compared to Nepalese standards.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Original Transcripts and Character certificates;Syllabus of the studied course;Passport and visa copy;Equivalency fee payment</data>
+    </node>
+    <node id="moctca">
+      <data key="name">Ministry of Culture, Tourism and Civil Aviation</data>
+      <data key="type">ministry</data>
+      <data key="category">Culture &amp; Tourism</data>
+      <data key="description">Governs civil aviation rules, promotes cultural archives, registers hotels, and controls mountaineering/trekking licenses.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="department_of_tourism">
+      <data key="name">Department of Tourism (DoT)</data>
+      <data key="type">department</data>
+      <data key="category">Culture &amp; Tourism</data>
+      <data key="description">Regulatory body for registering hotels, travel agencies, tour guides, and issuing climbing permits for high peaks.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="mountaineering_climbing_permit">
+      <data key="name">Mountaineering Climbing Permit Application</data>
+      <data key="type">service</data>
+      <data key="category">Culture &amp; Tourism</data>
+      <data key="description">Online application for peak climbing permissions (Everest, Lhotse, Ama Dablam) for expeditions.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Climber Biodata;Medical fitness certificate;Insurance;Liaison Officer details;Expedition fee receipt</data>
+    </node>
+    <node id="caan">
+      <data key="name">Civil Aviation Authority of Nepal (CAAN)</data>
+      <data key="type">department</data>
+      <data key="category">Culture &amp; Tourism</data>
+      <data key="description">The independent regulator of civil aviation and airport operations across Nepal.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="drone_flying_permit">
+      <data key="name">Drone Registration &amp; Flight Permit</data>
+      <data key="type">service</data>
+      <data key="category">Culture &amp; Tourism</data>
+      <data key="description">Registration of unmanned aerial vehicles (UAVs/Drones) and seeking flight approval for specified zones and timeframes.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Drone specification sheet;Passport/Citizenship Copy;Purpose and map of target area;Security Clearance recommendation</data>
+    </node>
+    <node id="moic">
+      <data key="name">Ministry of Information and Communication</data>
+      <data key="type">ministry</data>
+      <data key="category">Information &amp; Telecommunication</data>
+      <data key="description">Regulates the telecom sector, broadcasting media licenses, postal systems, and cyber networks.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="nta">
+      <data key="name">Nepal Telecommunications Authority (NTA)</data>
+      <data key="type">department</data>
+      <data key="category">Information &amp; Telecommunication</data>
+      <data key="description">The autonomous regulatory body for telecommunications, ISP licensing, frequency allocations, and consumer protection.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="mdms_registration">
+      <data key="name">Mobile Device Management System (MDMS) Registration</data>
+      <data key="type">service</data>
+      <data key="category">Information &amp; Telecommunication</data>
+      <data key="description">Registering the IMEI of foreign-purchased mobile phones to whitelist them for Nepalese SIM networks.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Device IMEI Number;Passport copy (showing arrival stamp) or Customs declaration receipt</data>
+    </node>
+    <node id="department_of_information_broadcasting">
+      <data key="name">Department of Information and Broadcasting (DoIB)</data>
+      <data key="type">department</data>
+      <data key="category">Information &amp; Telecommunication</data>
+      <data key="description">Issues official press credentials and registers/renews internet news portals and television/radio licenses.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="press_card_issuance">
+      <data key="name">Journalist Press Representative Card Issuance</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Formal vetting and card issuance for working media journalists to access governmental briefings.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Appointment letter from media;Academic certificate copy;Recommendation from chief editor;Citizenship copy</data>
+    </node>
+    <node id="online_media_portal_registration">
+      <data key="name">Online News Portal Registration &amp; Renewal</data>
+      <data key="type">service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Licensing process for digital news sites to operate legally inside Nepal.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Company registration certificate;Editor qualification details;PAN/VAT card;Domain name receipt</data>
+    </node>
+    <node id="moafe">
+      <data key="name">Ministry of Agriculture, Forests and Environment</data>
+      <data key="type">ministry</data>
+      <data key="category">Agriculture &amp; Environment</data>
+      <data key="description">Develops farming initiatives, monitors environmental pollution levels, manages biodiversity reserves, and executes climate policies.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="department_of_environment">
+      <data key="name">Department of Environment</data>
+      <data key="type">department</data>
+      <data key="category">Agriculture &amp; Environment</data>
+      <data key="description">Formulates environmental standards, reviews EIAs, and enforces pollution control measures.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="pollution_clearance_eia">
+      <data key="name">Environmental Impact Assessment (EIA) Review &amp; Pollution Clearance</data>
+      <data key="type">service</data>
+      <data key="category">Agriculture &amp; Environment</data>
+      <data key="description">Clearance certification required for factories, hydropowers, and hotels showing compliance with noise, air, and waste regulations.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">EIA/IEE report booklet;Land papers;Local ward recommendation;Technical specifications</data>
+    </node>
+    <node id="moics">
+      <data key="name">Ministry of Industry, Commerce and Supplies</data>
+      <data key="type">ministry</data>
+      <data key="category">Industry &amp; Commerce</data>
+      <data key="description">Supports commercial ventures, coordinates bilateral trade treaties, manages supply lines, and registers companies.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="ocr">
+      <data key="name">Office of the Company Registrar (OCR)</data>
+      <data key="type">department</data>
+      <data key="category">Industry &amp; Commerce</data>
+      <data key="description">Designated authority for registering private/public limited businesses and partnerships.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="company_incorporation">
+      <data key="name">Company Incorporation Registration</data>
+      <data key="type">service</data>
+      <data key="category">Investment &amp; Business</data>
+      <data key="description">Online application to register a new private/public company, including name reservation, article submission, and fee payment.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Reserved Company Name;Memorandum of Association (MoA);Articles of Association (AoA);Citizenship copies of founders;Witness signatures</data>
+    </node>
+    <node id="company_share_transfer_filing">
+      <data key="name">Filing of Company Board Changes &amp; Share Transfers</data>
+      <data key="type">service</data>
+      <data key="category">Investment &amp; Business</data>
+      <data key="description">Digital submission of annual shareholder resolutions, transfer of stock, change in company directors, and address modifications.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Board Resolution copy;Share transfer agreement deed;Tax clearance;Audited balance sheet</data>
+    </node>
+    <node id="moyle">
+      <data key="name">Ministry of Youth, Labour and Employment</data>
+      <data key="type">ministry</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Regulates local and foreign employment, administers contribution-based social security, and supports youth vocational plans.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="dofe">
+      <data key="name">Department of Foreign Employment (DoFE)</data>
+      <data key="type">department</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Administers labor migrations, registers foreign recruitment agencies, and issues overseas work permits.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="foreign_labor_permit">
+      <data key="name">Foreign Labor Permit (Shram Suwikriti)</data>
+      <data key="type">service</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Mandatory online application via FEIMS for new or renewal labor permits for Nepalese citizens seeking work abroad.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">Passport;Valid Foreign Visa;Employment Agreement;Welfare fund fee receipt;Pre-departure insurance;Medical clearance</data>
+    </node>
+    <node id="ssf">
+      <data key="name">Social Security Fund (SSF)</data>
+      <data key="type">department</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Manages national contribution-based social security funds for medical, maternity, disability, and retirement.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="ssf_contribution_tracking">
+      <data key="name">Social Security Contribution Tracking</data>
+      <data key="type">service</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Check monthly contribution allocations deposited by employers or self-employed individuals into the social security fund.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">true</data>
+      <data key="required_documents">SSF Identity Number;PAN or Citizenship Number</data>
+    </node>
+    <node id="pmep">
+      <data key="name">Prime Minister Employment Programme (PMEP)</data>
+      <data key="type">department</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Administers localized employment opportunities and cash benefits for unemployed families.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="unemployed_registration_pmep">
+      <data key="name">Unemployed Citizen Registration</data>
+      <data key="type">service</data>
+      <data key="category">Labour &amp; Employment</data>
+      <data key="description">Online/offline registration by unemployed citizens at local ward offices to secure 100 days of work or unemployment subsistence grants.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship copy;Self-declaration of family income;Ward verification stamp</data>
+    </node>
+    <node id="mod">
+      <data key="name">Ministry of Defence</data>
+      <data key="type">ministry</data>
+      <data key="category">Defence</data>
+      <data key="description">Coordinates national security agencies, formulates defense strategies, and oversees military operations.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="nepalese_army">
+      <data key="name">Nepalese Army (Jangi Adda)</data>
+      <data key="type">department</data>
+      <data key="category">Defence</data>
+      <data key="description">The defense force responsible for national sovereignty protection, military peacekeeping, and rescue missions.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="military_recruitment_application">
+      <data key="name">Military Officer/Soldier Online Recruitment</data>
+      <data key="type">service</data>
+      <data key="category">Employment &amp; Recruitment</data>
+      <data key="description">Submission of physical and academic application forms online for joining the Nepalese Army ranks.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Citizenship certificate;Academic transcripts;Character Certificate;Passport Photos</data>
+    </node>
+    <node id="global_benchmarks">
+      <data key="name">Global Benchmark Services (International Integrations)</data>
+      <data key="type">benchmark_portal</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">Benchmark services and portals from successful global e-governance systems to guide the MyGov upgrade.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="asan_xidmet">
+      <data key="name">ASAN Xidmət (Azerbaijan One-Stop-Shop)</data>
+      <data key="type">benchmark_portal</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">State agency for public services to citizens under the President of Azerbaijan, famous for high efficiency and one-stop centers.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="asan_id_passports">
+      <data key="name">ASAN Identity and Passports Issuance</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Unified desk service where citizenship IDs and foreign travel passports are processed and handed over within minutes/hours.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Application Form;Birth certificate or old ID;State fee voucher</data>
+    </node>
+    <node id="asan_notary">
+      <data key="name">ASAN Unified Notary &amp; Document Certification</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Integrated notarial system for quick validation, attorney setups, and certified translation stamps in one office visit.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Original Documents;Identification proof</data>
+    </node>
+    <node id="asan_real_estate">
+      <data key="name">ASAN Real Estate Registry &amp; Land Title Deeds</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Land, Local Gov &amp; Administration</data>
+      <data key="description">Integrated registry desk for instant transfer of real estate titles and property evaluation notes.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Sales Deed;Property ID;Seller and Buyer IDs;Fee payment receipt</data>
+    </node>
+    <node id="asan_pay">
+      <data key="name">ASAN Pay (Unified State Payment Portal)</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Finance &amp; Revenue</data>
+      <data key="description">Standardized payment network for paying all government fees, court fines, traffic tickets, and utility payments.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Billing Invoice number or fine token</data>
+    </node>
+    <node id="asan_kommunal">
+      <data key="name">ASAN Kommunal (Unified Utility Desk)</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Utility Payments</data>
+      <data key="description">Merged service counters for gas, electricity, and water meters, supporting installations and bill clearing.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Subscriber Account details;ID proof</data>
+    </node>
+    <node id="asan_mobile">
+      <data key="name">Mobile ASAN (Buses &amp; Trains Outreach)</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">Customized buses and trains equipped with satellite links and office counters traveling to remote areas to deliver services.</data>
+      <data key="digitized_status">Partially Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Varies by target service (Citizenship, Passport, etc.)</data>
+    </node>
+    <node id="e_estonia">
+      <data key="name">e-Estonia (Estonian Digital State Portal)</data>
+      <data key="type">benchmark_portal</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">The world's most advanced digital society, where 99% of government services are available online 24/7.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="estonia_eresidency">
+      <data key="name">Estonian e-Residency Digital Identity</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Transnational digital identity card issued to global citizens, allowing them to establish and run an EU-based business online.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Passport scan;Motivation statement;Credit Card payment;Biometric collection at embassy</data>
+    </node>
+    <node id="estonia_evoting">
+      <data key="name">e-Voting (i-Voting Remote Election System)</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Democracy &amp; Elections</data>
+      <data key="description">Secure internet voting system allowing citizens to cast ballots from anywhere in the world during elections.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Estonian Smart ID Card or Mobile-ID;PIN Codes</data>
+    </node>
+    <node id="estonia_ehealth">
+      <data key="name">Electronic Health Record (EHR) &amp; e-Prescriptions</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Health &amp; Nutrition</data>
+      <data key="description">Secure blockchain-backed patient records portal sharing diagnostic history and automated electronic medical prescriptions.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Digital ID login</data>
+    </node>
+    <node id="singpass_singapore">
+      <data key="name">Singpass (Singapore National Digital Identity)</data>
+      <data key="type">benchmark_portal</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">Singapore's trusted digital identity app containing credentials and personal profiles of residents.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="singpass_myinfo">
+      <data key="name">MyInfo Consent-Based Data Sharing API</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Personal data platform allowing users to consent to pre-fill forms automatically for government and private banking services.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Singpass App credentials;User explicit biometric consent</data>
+    </node>
+    <node id="singpass_signing">
+      <data key="name">Singpass Sign (Digital Contract Signing)</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Secure legal signing of business documents and property loans using cryptographic signatures validated by Singpass.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Document PDF;Singpass App scanner</data>
+    </node>
+    <node id="digilocker_india">
+      <data key="name">DigiLocker (Indian Digital Document Wallet)</data>
+      <data key="type">benchmark_portal</data>
+      <data key="category">Global Best Practices</data>
+      <data key="description">India's cloud document storage and verification system delivering legally valid digital certificates.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">N/A</data>
+    </node>
+    <node id="digilocker_wallet">
+      <data key="name">DigiLocker Document Wallet &amp; Verifier</data>
+      <data key="type">benchmark_service</data>
+      <data key="category">Identity &amp; Legal Certificates</data>
+      <data key="description">Storage and instant retrieval of academic boards transcripts, driver licenses, and insurance deeds directly verified by issuing authorities.</data>
+      <data key="digitized_status">Fully Online</data>
+      <data key="nagarik_app">false</data>
+      <data key="required_documents">Aadhaar Card Link;OTP Verification</data>
+    </node>
+    <edge id="e1" source="opmcm" target="psc"/>
+    <edge id="e2" source="psc" target="lok_sewa_job_application"/>
+    <edge id="e3" source="psc" target="lok_sewa_exam_schedule_results"/>
+    <edge id="e4" source="opmcm" target="ecn"/>
+    <edge id="e5" source="ecn" target="voter_registration_biometrics"/>
+    <edge id="e6" source="ecn" target="check_voter_card_details"/>
+    <edge id="e7" source="opmcm" target="ciaa"/>
+    <edge id="e8" source="ciaa" target="report_corruption_bribe"/>
+    <edge id="e9" source="opmcm" target="hello_sarkar"/>
+    <edge id="e10" source="hello_sarkar" target="register_grievance"/>
+    <edge id="e11" source="hello_sarkar" target="track_grievance"/>
+    <edge id="e12" source="opmcm" target="ppmo"/>
+    <edge id="e13" source="ppmo" target="egp_contractor_registration"/>
+    <edge id="e14" source="ppmo" target="browse_public_tenders"/>
+    <edge id="e15" source="opmcm" target="ibn"/>
+    <edge id="e16" source="ibn" target="large_project_fdi_application"/>
+    <edge id="e17" source="opmcm" target="nso"/>
+    <edge id="e18" source="nso" target="request_statistical_data"/>
+    <edge id="e19" source="opmcm" target="moha"/>
+    <edge id="e20" source="moha" target="nepal_police"/>
+    <edge id="e21" source="nepal_police" target="police_clearance_certificate"/>
+    <edge id="e22" source="nepal_police" target="online_crime_reporting"/>
+    <edge id="e23" source="moha" target="donidcr"/>
+    <edge id="e24" source="donidcr" target="national_id_pre_enrollment"/>
+    <edge id="e25" source="donidcr" target="vital_event_registration"/>
+    <edge id="e26" source="moha" target="doi"/>
+    <edge id="e27" source="doi" target="tourist_visa_extension"/>
+    <edge id="e28" source="doi" target="trekking_permit_restricted"/>
+    <edge id="e29" source="moha" target="dao"/>
+    <edge id="e30" source="dao" target="citizenship_certificate_issuance"/>
+    <edge id="e31" source="dao" target="citizenship_duplicate_issuance"/>
+    <edge id="e32" source="dao" target="organization_ngo_registration"/>
+    <edge id="e33" source="opmcm" target="mof"/>
+    <edge id="e34" source="mof" target="ird"/>
+    <edge id="e35" source="ird" target="personal_pan_registration"/>
+    <edge id="e36" source="ird" target="income_tax_filing"/>
+    <edge id="e37" source="ird" target="tax_clearance_certificate"/>
+    <edge id="e38" source="mof" target="doc"/>
+    <edge id="e39" source="doc" target="exim_code_registration"/>
+    <edge id="e40" source="mof" target="fcgo"/>
+    <edge id="e41" source="fcgo" target="government_revenue_epayment"/>
+    <edge id="e42" source="opmcm" target="mofa"/>
+    <edge id="e43" source="mofa" target="department_of_passport"/>
+    <edge id="e44" source="department_of_passport" target="epassport_pre_enrollment"/>
+    <edge id="e45" source="department_of_passport" target="passport_status_tracking"/>
+    <edge id="e46" source="mofa" target="consular_services"/>
+    <edge id="e47" source="consular_services" target="document_attestation"/>
+    <edge id="e48" source="consular_services" target="repatriation_and_rescue"/>
+    <edge id="e49" source="opmcm" target="moewri"/>
+    <edge id="e50" source="moewri" target="nea"/>
+    <edge id="e51" source="nea" target="electricity_bill_payment"/>
+    <edge id="e52" source="nea" target="new_electricity_connection"/>
+    <edge id="e53" source="opmcm" target="moid"/>
+    <edge id="e54" source="moid" target="dotm"/>
+    <edge id="e55" source="dotm" target="driving_license_preenrollment"/>
+    <edge id="e56" source="dotm" target="driving_license_renewal"/>
+    <edge id="e57" source="dotm" target="vehicle_tax_bluebook_renewal"/>
+    <edge id="e58" source="dotm" target="embossed_plate_application"/>
+    <edge id="e59" source="opmcm" target="moljpa"/>
+    <edge id="e60" source="moljpa" target="notary_public_council"/>
+    <edge id="e61" source="notary_public_council" target="notarization_services"/>
+    <edge id="e62" source="notary_public_council" target="document_translation_certified"/>
+    <edge id="e63" source="notary_public_council" target="verify_notary_license"/>
+    <edge id="e64" source="opmcm" target="mosti"/>
+    <edge id="e65" source="mosti" target="doit"/>
+    <edge id="e66" source="doit" target="digital_signature_issuance"/>
+    <edge id="e67" source="opmcm" target="mowcgmss"/>
+    <edge id="e68" source="mowcgmss" target="doss"/>
+    <edge id="e69" source="doss" target="social_security_allowance_apply"/>
+    <edge id="e70" source="opmcm" target="molmcfaga"/>
+    <edge id="e71" source="molmcfaga" target="dolrm"/>
+    <edge id="e72" source="dolrm" target="land_ownership_lalpurja_lookup"/>
+    <edge id="e73" source="dolrm" target="property_mortgage_rokka_fukua"/>
+    <edge id="e74" source="molmcfaga" target="survey_department"/>
+    <edge id="e75" source="survey_department" target="mero_kitta_maps"/>
+    <edge id="e76" source="molmcfaga" target="local_municipalities"/>
+    <edge id="e77" source="local_municipalities" target="local_property_tax_payment"/>
+    <edge id="e78" source="local_municipalities" target="house_map_approval_naksa"/>
+    <edge id="e79" source="local_municipalities" target="wada_sifarish_relationship"/>
+    <edge id="e80" source="local_municipalities" target="wada_sifarish_income"/>
+    <edge id="e81" source="opmcm" target="mohfh"/>
+    <edge id="e82" source="mohfh" target="department_of_health_services"/>
+    <edge id="e83" source="department_of_health_services" target="vaccine_qr_certification"/>
+    <edge id="e84" source="mohfh" target="health_insurance_board"/>
+    <edge id="e85" source="health_insurance_board" target="health_insurance_enrollment"/>
+    <edge id="e86" source="opmcm" target="moes"/>
+    <edge id="e87" source="moes" target="foreign_study_permission"/>
+    <edge id="e88" source="foreign_study_permission" target="no_objection_certificate_noc"/>
+    <edge id="e89" source="moes" target="curriculum_development_centre"/>
+    <edge id="e90" source="curriculum_development_centre" target="academic_equivalency_certificate"/>
+    <edge id="e91" source="opmcm" target="moctca"/>
+    <edge id="e92" source="moctca" target="department_of_tourism"/>
+    <edge id="e93" source="department_of_tourism" target="mountaineering_climbing_permit"/>
+    <edge id="e94" source="moctca" target="caan"/>
+    <edge id="e95" source="caan" target="drone_flying_permit"/>
+    <edge id="e96" source="opmcm" target="moic"/>
+    <edge id="e97" source="moic" target="nta"/>
+    <edge id="e98" source="nta" target="mdms_registration"/>
+    <edge id="e99" source="moic" target="department_of_information_broadcasting"/>
+    <edge id="e100" source="department_of_information_broadcasting" target="press_card_issuance"/>
+    <edge id="e101" source="department_of_information_broadcasting" target="online_media_portal_registration"/>
+    <edge id="e102" source="opmcm" target="moafe"/>
+    <edge id="e103" source="moafe" target="department_of_environment"/>
+    <edge id="e104" source="department_of_environment" target="pollution_clearance_eia"/>
+    <edge id="e105" source="opmcm" target="moics"/>
+    <edge id="e106" source="moics" target="ocr"/>
+    <edge id="e107" source="ocr" target="company_incorporation"/>
+    <edge id="e108" source="ocr" target="company_share_transfer_filing"/>
+    <edge id="e109" source="opmcm" target="moyle"/>
+    <edge id="e110" source="moyle" target="dofe"/>
+    <edge id="e111" source="dofe" target="foreign_labor_permit"/>
+    <edge id="e112" source="moyle" target="ssf"/>
+    <edge id="e113" source="ssf" target="ssf_contribution_tracking"/>
+    <edge id="e114" source="moyle" target="pmep"/>
+    <edge id="e115" source="pmep" target="unemployed_registration_pmep"/>
+    <edge id="e116" source="opmcm" target="mod"/>
+    <edge id="e117" source="mod" target="nepalese_army"/>
+    <edge id="e118" source="nepalese_army" target="military_recruitment_application"/>
+    <edge id="e119" source="opmcm" target="global_benchmarks"/>
+    <edge id="e120" source="global_benchmarks" target="asan_xidmet"/>
+    <edge id="e121" source="asan_xidmet" target="asan_id_passports"/>
+    <edge id="e122" source="asan_xidmet" target="asan_notary"/>
+    <edge id="e123" source="asan_xidmet" target="asan_real_estate"/>
+    <edge id="e124" source="asan_xidmet" target="asan_pay"/>
+    <edge id="e125" source="asan_xidmet" target="asan_kommunal"/>
+    <edge id="e126" source="asan_xidmet" target="asan_mobile"/>
+    <edge id="e127" source="global_benchmarks" target="e_estonia"/>
+    <edge id="e128" source="e_estonia" target="estonia_eresidency"/>
+    <edge id="e129" source="e_estonia" target="estonia_evoting"/>
+    <edge id="e130" source="e_estonia" target="estonia_ehealth"/>
+    <edge id="e131" source="global_benchmarks" target="singpass_singapore"/>
+    <edge id="e132" source="singpass_singapore" target="singpass_myinfo"/>
+    <edge id="e133" source="singpass_singapore" target="singpass_signing"/>
+    <edge id="e134" source="global_benchmarks" target="digilocker_india"/>
+    <edge id="e135" source="digilocker_india" target="digilocker_wallet"/>
+  </graph>
+</graphml>

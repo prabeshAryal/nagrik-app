@@ -1,0 +1,290 @@
+# Nepal & Global Benchmark Government Services Tree
+
+> [!NOTE]
+> This document lists the hierarchical structure of ministries, departments, and services of Nepal (2026 restructuring) and international best practice integrations.
+> Legend: 📱 = Integrated in Nagarik App | 🌐 = Fully Online | 🔀 = Partially Online | 📝 = Manual
+
+- **Office of the Prime Minister and Council of Ministers** (Root Office)
+  - **Public Service Commission (Lok Sewa Aayog)** (Constitutional Body)
+    - [Service] *Lok Sewa Job Application & Registration* 📱 🌐
+      - *Description*: Online registration, application submission, and fee payment for federal civil service examinations.
+      - *Required Documents*: `Citizenship`, `Academic Certificates`, `Character Certificate`, `Passport Photo`, `Signature Scan`
+    - [Service] *Civil Service Exam Schedule and Results Portal* 📱 🌐
+      - *Description*: Public portal for checking examination dates, roll numbers, syllabus, written results, and interview calls.
+  - **Election Commission Nepal** (Constitutional Body)
+    - [Service] *Voter Registration with Biometrics* 🔀
+      - *Description*: Pre-registration of voting details online, followed by biometric (fingerprint/photo) collection at district offices.
+      - *Required Documents*: `Citizenship Certificate`, `Proof of Address (if different from citizenship)`
+    - [Service] *Check Voter Card Details & Polling Center* 📱 🌐
+      - *Description*: Digital inquiry system to view voter ID card status, voting number, and designated polling booth.
+      - *Required Documents*: `Voter ID Number or Citizenship Number`
+  - **Commission for the Investigation of Abuse of Authority (CIAA)** (Constitutional Body)
+    - [Service] *Report Corruption and Abuse of Office* 🌐
+      - *Description*: Online form and toll-free helpline to register corruption allegations, bribery complaints, and submit supporting evidence.
+      - *Required Documents*: `Evidence documents/media (optional)`, `Complaint letter`
+  - Hello Sarkar Public Grievance Portal (Department/Agency)
+    - [Service] *Lodge Citizen Grievance* 📱 🌐
+      - *Description*: Lodge complaints against public agencies, officials, delayed services, or infrastructure issues via web, SMS, phone, or app.
+      - *Required Documents*: `Details of the grievance`, `Supporting files/photos (optional)`
+    - [Service] *Track Grievance Status* 📱 🌐
+      - *Description*: Track the action taken on registered complaints using a unique token identifier.
+      - *Required Documents*: `Complaint Token ID`
+  - Public Procurement Monitoring Office (PPMO) (Department/Agency)
+    - [Service] *e-GP Contractor/Bidder Registration* 🌐
+      - *Description*: Online registration of business firms and contractors to bid for government tenders.
+      - *Required Documents*: `Company Registration`, `Tax Clearance`, `PAN/VAT Certificate`, `Bank Guarantee`
+    - [Service] *Browse Public Tenders & Contracts* 🌐
+      - *Description*: Search, view, and download active public procurement bidding documents and contract awards.
+  - Investment Board Nepal (IBN) (Department/Agency)
+    - [Service] *Large-Scale Project FDI Approval* 🔀
+      - *Description*: Submission and tracking of foreign investment proposals above the threshold for large projects (hydropower, highways, factories).
+      - *Required Documents*: `Project Proposal`, `Financial Plan`, `Company Profile`, `Feasibility Report`
+  - National Statistics Office (NSO) (Department/Agency)
+    - [Service] *Request Census & Survey Microdata* 🔀
+      - *Description*: Online application for researchers to access official survey microdata, census sheets, or demographic statistics.
+      - *Required Documents*: `Request Letter`, `Research Proposal`, `Institution ID`
+  - **Ministry of Home Affairs** (Ministry)
+    - Nepal Police (Department/Agency)
+      - [Service] *Police Clearance Certificate (PCC)* 📱 🌐
+        - *Description*: Online application for Police Character Certificate for job, visa, or studies abroad.
+        - *Required Documents*: `Citizenship Certificate`, `Passport bio-data page`, `Passport photo`, `Marriage Certificate (for females if surname changed)`
+      - [Service] *Online Crime and Cybercrime Reporting* 🌐
+        - *Description*: Portal to report cyber harassment, digital financial fraud, or theft without visiting a station physically.
+        - *Required Documents*: `Incident description`, `Screenshots/Evidence files`, `ID Proof`
+    - Department of National ID and Civil Registration (DoNIDCR) (Department/Agency)
+      - [Service] *National ID Pre-enrollment & Biometric Booking* 📱 🔀
+        - *Description*: Online pre-registration of demographic data to obtain a registration number and book biometric appointment slots.
+        - *Required Documents*: `Original Citizenship Certificate`, `Marriage Certificate (if applicable)`, `Birth Certificate (for children)`
+      - [Service] *Civil Event Registration (Birth, Marriage, Death, Divorce, Migration)* 📱 🔀
+        - *Description*: Online reporting of vital life events via ward offices to record and issue official registration certificates.
+        - *Required Documents*: `Hospital birth notification/Marriage card/Death report`, `Citizenship certificates of parties`, `Migration document`
+    - Department of Immigration (DoI) (Department/Agency)
+      - [Service] *Online Tourist Visa Extension* 🌐
+        - *Description*: Online application for foreign tourists to extend their legal stay in Nepal.
+        - *Required Documents*: `Passport scan`, `Current Visa details`, `Online payment confirmation`
+      - [Service] *Restricted Area Trekking Permit* 🔀
+        - *Description*: Issuance of special trekking permits for foreigners seeking to trek in restricted frontier zones (Upper Mustang, Manaslu, Dolpo).
+        - *Required Documents*: `Passport Copy`, `Valid Visa Copy`, `Trekking Agency credentials`, `Authorized Guide details`
+    - District Administration Office (DAO) (Department/Agency)
+      - [Service] *Citizenship Certificate (Nagarikta) Issuance* 📱 📝
+        - *Description*: Application and formal physical verification for the issuance of the basic national identity document.
+        - *Required Documents*: `Parents' Citizenship Certificates`, `Local Ward Recommendation`, `Birth Certificate`, `Academic certificate (optional)`
+      - [Service] *Request Duplicate Citizenship (Pratilipi)* 📝
+        - *Description*: Application for a duplicate citizenship certificate in case of loss, damage, or correction of the original.
+        - *Required Documents*: `Police report of lost card`, `Ward Recommendation`, `Copy of original citizenship (if available)`, `Passport Photos`
+      - [Service] *NGO & Organization Registration and Renewal* 📝
+        - *Description*: Process for registering and renewing non-profit organizations, social clubs, and NGOs at the district level.
+        - *Required Documents*: `Organization Constitution`, `Founder list & passports`, `Rent agreement`, `Police character reports of founders`, `Ward approval`
+  - **Ministry of Finance** (Ministry)
+    - Inland Revenue Department (IRD) (Department/Agency)
+      - [Service] *Personal PAN Registration* 📱 🌐
+        - *Description*: Online application for a Permanent Account Number (PAN) required for jobs, banking, and professional work.
+        - *Required Documents*: `Citizenship Certificate Copy`, `Passport Photo`, `National ID (if available)`
+      - [Service] *Income Tax Return Filing (D-1, D-2, D-3)* 🌐
+        - *Description*: Online portal for individuals and entities to declare annual income, calculate tax, and file returns.
+        - *Required Documents*: `PAN details`, `Bank accounts`, `Salary statement/Income evidence`, `Tax deduction receipts`
+      - [Service] *Online Tax Clearance Certificate* 🌐
+        - *Description*: Request and generate a certified document proving all tax liabilities have been resolved for the fiscal year.
+        - *Required Documents*: `PAN`, `Tax return submission confirmation`, `Payment receipt`
+    - Department of Customs (Department/Agency)
+      - [Service] *EXIM Code Registration and Renewal* 🌐
+        - *Description*: Online registration of Export-Import Code (EXIM) mandatory for carrying out international trade.
+        - *Required Documents*: `Company registration certificate`, `PAN/VAT certificate`, `Bank guarantee (minimum NPR 3-10 Lakhs)`, `Rent agreement`
+    - Financial Comptroller General Office (FCGO) (Department/Agency)
+      - [Service] *Government Revenue e-Payment Portal* 🌐
+        - *Description*: Unified online platform to pay taxes, service charges, passport fees, and license fees to various offices.
+        - *Required Documents*: `Billing reference code/Voucher`
+  - **Ministry of Foreign Affairs** (Ministry)
+    - Department of Passport (DoP) (Department/Agency)
+      - [Service] *e-Passport Pre-Enrollment & Appointment Booking* 📱 🔀
+        - *Description*: Mandatory online application form and biometric appointment selection for e-Passport issuance.
+        - *Required Documents*: `National ID Number (NID)`, `Citizenship Certificate`, `Old Passport (if renewing)`, `Payment Voucher`
+      - [Service] *Passport Status Tracking* 📱 🌐
+        - *Description*: Track the print status, dispatch, and delivery location of pre-booked passport applications.
+        - *Required Documents*: `Application Reference Number or Passport Number`
+    - Department of Consular Services (Department/Agency)
+      - [Service] *Online Consular Document Attestation* 📱 🔀
+        - *Description*: Submitting personal and academic documents for MoFA attestation prior to abroad use. Verified online via integration with line departments.
+        - *Required Documents*: `Original Document to attest`, `Notarized translation copy`, `Citizenship copy`, `Application voucher`
+      - [Service] *Citizen Repatriation and Rescue Coordination* 🌐
+        - *Description*: Register requests for rescue, legal aid, or repatriation of Nepalese workers stranded, jailed, or in distress abroad.
+        - *Required Documents*: `Passport Copy`, `Visa/Labor Permit Copy`, `Description of distress`, `Employer details`
+  - **Ministry of Energy, Water Resources and Irrigation** (Ministry)
+    - Nepal Electricity Authority (NEA) (Department/Agency)
+      - [Service] *Electricity Bill Inquiry & Payment* 📱 🌐
+        - *Description*: Search monthly electricity consumption bills and pay online via multiple digital payment gateways.
+        - *Required Documents*: `NEA Consumer ID`, `Counter office name`
+      - [Service] *Apply for New Meter/Connection* 🔀
+        - *Description*: Online application for a new electricity connection line or upgrade to 3-phase/industrial connection lines.
+        - *Required Documents*: `Land ownership Lalpurja`, `Citizenship Certificate`, `Ward Recommendation`, `No-Objection statement from neighbor`
+  - **Ministry of Infrastructure Development** (Ministry)
+    - Department of Transport Management (DoTM) (Department/Agency)
+      - [Service] *Driving License Application & Exam Slot Booking* 📱 🔀
+        - *Description*: Apply for a new driving license category, fill out the form online, and book dates for the medical/exam tests.
+        - *Required Documents*: `Citizenship copy`, `Blood Group report`, `Passport photo`, `Citizenship original (during test)`
+      - [Service] *Driving License Renewal Application* 📱 🔀
+        - *Description*: Submit driving license renewal form online, calculate renewal fees, and check pending traffic fines.
+        - *Required Documents*: `Original Driving License`, `Health Certificate (certified by registered physician)`, `Payment receipt`
+      - [Service] *Vehicle Tax and Bluebook Renewal* 📱 🔀
+        - *Description*: Check annual vehicle road tax, pay online, and schedule physical bluebook endorsement at transport offices.
+        - *Required Documents*: `Vehicle Bluebook details`, `Third-party insurance certificate`, `PAN (for commercial vehicles)`
+      - [Service] *Embossed Number Plate Registration* 🔀
+        - *Description*: Apply for the mandatory RFID-based embossed number plate for vehicles, submit fees, and book fitment appointment.
+        - *Required Documents*: `Bluebook Copy`, `Tax Clearance receipt`, `Citizenship Certificate`, `Fitment fee voucher`
+  - **Ministry of Law, Justice and Parliamentary Affairs** (Ministry)
+    - Nepal Notary Public Council (Department/Agency)
+      - [Service] *Notarization & Document Certification* 📝
+        - *Description*: Formal certification of document photocopies as 'true copies' by a licensed notary public for official applications.
+        - *Required Documents*: `Original Document`, `Photocopy to be certified`, `ID proof of requestor`
+      - [Service] *Certified Document Translation* 📝
+        - *Description*: Translating official documents (Citizenship, Birth certificates, Marksheets) from Nepali to English by a council-licensed translator.
+        - *Required Documents*: `Original Nepali Document`, `Translator Fee`
+      - [Service] *Verify Notary Public License* 🌐
+        - *Description*: Search directory to verify if a Notary Public is registered and legally authorized to authenticate documents.
+        - *Required Documents*: `Notary Name or License Number`
+  - **Ministry of Science, Technology and Innovation** (Ministry)
+    - Department of Information Technology (DoIT) (Department/Agency)
+      - [Service] *Digital Signature Certificate (DSC) Issuance* 🔀
+        - *Description*: Issuance of cryptographic digital signature keys to secure online transactions, bidding, and filing for businesses and officials.
+        - *Required Documents*: `Citizenship copy`, `Company Registration (for business keys)`, `Application form`, `Biometric validation`
+  - **Ministry of Women, Children, Gender & Sexual Minorities and Social Security** (Ministry)
+    - Department of Social Security (Department/Agency)
+      - [Service] *Social Security Allowance Registration* 🔀
+        - *Description*: Apply for senior citizen cash allowance, single women/widow allowance, or disability allowance at the local ward office.
+        - *Required Documents*: `Citizenship Certificate`, `Disability Card (for disability allowance)`, `Proof of age (70+ / 60+ in designated zones)`, `Ward Recommendation`
+  - **Ministry of Land Management, Cooperatives, Federal Affairs and General Administration** (Ministry)
+    - Department of Land Reform and Management (Land Revenue / Malpot) (Department/Agency)
+      - [Service] *Land Ownership (Lalpurja) Records Inquiry* 📱 🌐
+        - *Description*: Online search of land registry records to verify ownership details, plot boundaries, and transaction history.
+        - *Required Documents*: `Lalpurja details (District, VDC/Municipality, Ward, Sheet No, Plot/Kitta No)`, `PAN or Citizenship No`
+      - [Service] *Property Mortgage Registration & Release (Rokka / Fukua)* 🔀
+        - *Description*: Registration of land mortgage with banks/financial institutions and formal release of land records after loan clearance.
+        - *Required Documents*: `Lalpurja`, `Citizenship`, `Bank Loan approval document`, `Property Valuation report`
+    - Department of Survey (Napi) (Department/Agency)
+      - [Service] *Mero Kitta Cadastral Map Printing* 🌐
+        - *Description*: Online platform to view, pay for, and download print-ready cadastral maps (Kitta Kaat) and field books without visiting the Napi office.
+        - *Required Documents*: `Lalpurja details`, `Citizenship Number`, `Payment Voucher`
+    - 753 Local Municipalities and Rural Wards (Department/Agency)
+      - [Service] *Local Property and Land Tax Payment* 📱 🌐
+        - *Description*: Online payment of local municipal property taxes, rental taxes, and land revenue (Malpot tax) via local e-governance systems.
+        - *Required Documents*: `Lalpurja Copy`, `Previous Tax receipt`, `PAN (optional)`
+      - [Service] *Building Construction Map Approval (Naksa Pass)* 🔀
+        - *Description*: Electronic building permit system (e-BPS) to submit blueprint maps, get clearances, and obtain construction permission certificates.
+        - *Required Documents*: `Lalpurja`, `Land Survey map`, `Cadastral print`, `Structural blueprints (certified by architect)`, `Citizenship Certificate`
+      - [Service] *Relationship Verification Certificate (Nata Pramanit)* 📱 🔀
+        - *Description*: Official recommendation letter verifying blood relationships between family members (vital for visa applications, property transfer).
+        - *Required Documents*: `Citizenship certificates of all members`, `Birth certificates`, `Passport size photos`, `Witness statements`
+      - [Service] *Annual Income Verification Recommendation* 📱 🔀
+        - *Description*: Local ward recommendation verifying the family's annual income sources (agriculture, business, salary) for scholarship or visa purposes.
+        - *Required Documents*: `Land Lalpurja (for agri income)`, `Salary certificate`, `Audit reports of business`, `Tax receipts`
+  - **Ministry of Health and Food Hygiene** (Ministry)
+    - Department of Health Services (Department/Agency)
+      - [Service] *Immunization/Vaccine QR Code Certification* 📱 🌐
+        - *Description*: Generate digitally verifiable vaccine certificate with a secure QR code (critical for travel and child school admissions).
+        - *Required Documents*: `Immunization card scan`, `Citizenship/Passport Copy`, `Mobile Number`
+    - Health Insurance Board (HIB) (Department/Agency)
+      - [Service] *Health Insurance Enrollment & Renewal* 🔀
+        - *Description*: Register family members under the national health insurance card, pay premium contributions, and track coverage limits.
+        - *Required Documents*: `Citizenship/Birth Certificates of all members`, `Family photo`, `Premium payment voucher`
+  - **Ministry of Education and Sports** (Ministry)
+    - Foreign Study Permission Section (NOC Section) (Department/Agency)
+      - [Service] *No Objection Certificate (NOC) for Abroad Studies* 📱 🌐
+        - *Description*: Complete online application, document verification, and e-payment to obtain an NOC letter.
+        - *Required Documents*: `Citizenship Certificate`, `Academic Transcripts (SLC/SEE, +2, or Bachelor's)`, `Offer letter from foreign university`, `Application fee receipt`
+    - Curriculum Development Centre (CDC) (Department/Agency)
+      - [Service] *Educational Degree/Board Equivalency Certificate* 🔀
+        - *Description*: Evaluation and formal issuance of equivalency for foreign academic boards/degrees compared to Nepalese standards.
+        - *Required Documents*: `Original Transcripts and Character certificates`, `Syllabus of the studied course`, `Passport and visa copy`, `Equivalency fee payment`
+  - **Ministry of Culture, Tourism and Civil Aviation** (Ministry)
+    - Department of Tourism (DoT) (Department/Agency)
+      - [Service] *Mountaineering Climbing Permit Application* 🔀
+        - *Description*: Online application for peak climbing permissions (Everest, Lhotse, Ama Dablam) for expeditions.
+        - *Required Documents*: `Climber Biodata`, `Medical fitness certificate`, `Insurance`, `Liaison Officer details`, `Expedition fee receipt`
+    - Civil Aviation Authority of Nepal (CAAN) (Department/Agency)
+      - [Service] *Drone Registration & Flight Permit* 🔀
+        - *Description*: Registration of unmanned aerial vehicles (UAVs/Drones) and seeking flight approval for specified zones and timeframes.
+        - *Required Documents*: `Drone specification sheet`, `Passport/Citizenship Copy`, `Purpose and map of target area`, `Security Clearance recommendation`
+  - **Ministry of Information and Communication** (Ministry)
+    - Nepal Telecommunications Authority (NTA) (Department/Agency)
+      - [Service] *Mobile Device Management System (MDMS) Registration* 📱 🌐
+        - *Description*: Registering the IMEI of foreign-purchased mobile phones to whitelist them for Nepalese SIM networks.
+        - *Required Documents*: `Device IMEI Number`, `Passport copy (showing arrival stamp) or Customs declaration receipt`
+    - Department of Information and Broadcasting (DoIB) (Department/Agency)
+      - [Service] *Journalist Press Representative Card Issuance* 🔀
+        - *Description*: Formal vetting and card issuance for working media journalists to access governmental briefings.
+        - *Required Documents*: `Appointment letter from media`, `Academic certificate copy`, `Recommendation from chief editor`, `Citizenship copy`
+      - [Service] *Online News Portal Registration & Renewal* 🔀
+        - *Description*: Licensing process for digital news sites to operate legally inside Nepal.
+        - *Required Documents*: `Company registration certificate`, `Editor qualification details`, `PAN/VAT card`, `Domain name receipt`
+  - **Ministry of Agriculture, Forests and Environment** (Ministry)
+    - Department of Environment (Department/Agency)
+      - [Service] *Environmental Impact Assessment (EIA) Review & Pollution Clearance* 🔀
+        - *Description*: Clearance certification required for factories, hydropowers, and hotels showing compliance with noise, air, and waste regulations.
+        - *Required Documents*: `EIA/IEE report booklet`, `Land papers`, `Local ward recommendation`, `Technical specifications`
+  - **Ministry of Industry, Commerce and Supplies** (Ministry)
+    - Office of the Company Registrar (OCR) (Department/Agency)
+      - [Service] *Company Incorporation Registration* 📱 🌐
+        - *Description*: Online application to register a new private/public company, including name reservation, article submission, and fee payment.
+        - *Required Documents*: `Reserved Company Name`, `Memorandum of Association (MoA)`, `Articles of Association (AoA)`, `Citizenship copies of founders`, `Witness signatures`
+      - [Service] *Filing of Company Board Changes & Share Transfers* 🌐
+        - *Description*: Digital submission of annual shareholder resolutions, transfer of stock, change in company directors, and address modifications.
+        - *Required Documents*: `Board Resolution copy`, `Share transfer agreement deed`, `Tax clearance`, `Audited balance sheet`
+  - **Ministry of Youth, Labour and Employment** (Ministry)
+    - Department of Foreign Employment (DoFE) (Department/Agency)
+      - [Service] *Foreign Labor Permit (Shram Suwikriti)* 📱 🌐
+        - *Description*: Mandatory online application via FEIMS for new or renewal labor permits for Nepalese citizens seeking work abroad.
+        - *Required Documents*: `Passport`, `Valid Foreign Visa`, `Employment Agreement`, `Welfare fund fee receipt`, `Pre-departure insurance`, `Medical clearance`
+    - Social Security Fund (SSF) (Department/Agency)
+      - [Service] *Social Security Contribution Tracking* 📱 🌐
+        - *Description*: Check monthly contribution allocations deposited by employers or self-employed individuals into the social security fund.
+        - *Required Documents*: `SSF Identity Number`, `PAN or Citizenship Number`
+    - Prime Minister Employment Programme (PMEP) (Department/Agency)
+      - [Service] *Unemployed Citizen Registration* 🔀
+        - *Description*: Online/offline registration by unemployed citizens at local ward offices to secure 100 days of work or unemployment subsistence grants.
+        - *Required Documents*: `Citizenship copy`, `Self-declaration of family income`, `Ward verification stamp`
+  - **Ministry of Defence** (Ministry)
+    - Nepalese Army (Jangi Adda) (Department/Agency)
+      - [Service] *Military Officer/Soldier Online Recruitment* 🔀
+        - *Description*: Submission of physical and academic application forms online for joining the Nepalese Army ranks.
+        - *Required Documents*: `Citizenship certificate`, `Academic transcripts`, `Character Certificate`, `Passport Photos`
+  - **Global Benchmark Services (International Integrations)** (Benchmark Portal)
+    - **ASAN Xidmət (Azerbaijan One-Stop-Shop)** (Benchmark Portal)
+      - [Service] *ASAN Identity and Passports Issuance* 🌐
+        - *Description*: Unified desk service where citizenship IDs and foreign travel passports are processed and handed over within minutes/hours.
+        - *Required Documents*: `Application Form`, `Birth certificate or old ID`, `State fee voucher`
+      - [Service] *ASAN Unified Notary & Document Certification* 🌐
+        - *Description*: Integrated notarial system for quick validation, attorney setups, and certified translation stamps in one office visit.
+        - *Required Documents*: `Original Documents`, `Identification proof`
+      - [Service] *ASAN Real Estate Registry & Land Title Deeds* 🔀
+        - *Description*: Integrated registry desk for instant transfer of real estate titles and property evaluation notes.
+        - *Required Documents*: `Sales Deed`, `Property ID`, `Seller and Buyer IDs`, `Fee payment receipt`
+      - [Service] *ASAN Pay (Unified State Payment Portal)* 🌐
+        - *Description*: Standardized payment network for paying all government fees, court fines, traffic tickets, and utility payments.
+        - *Required Documents*: `Billing Invoice number or fine token`
+      - [Service] *ASAN Kommunal (Unified Utility Desk)* 🌐
+        - *Description*: Merged service counters for gas, electricity, and water meters, supporting installations and bill clearing.
+        - *Required Documents*: `Subscriber Account details`, `ID proof`
+      - [Service] *Mobile ASAN (Buses & Trains Outreach)* 🔀
+        - *Description*: Customized buses and trains equipped with satellite links and office counters traveling to remote areas to deliver services.
+        - *Required Documents*: `Varies by target service (Citizenship, Passport, etc.)`
+    - **e-Estonia (Estonian Digital State Portal)** (Benchmark Portal)
+      - [Service] *Estonian e-Residency Digital Identity* 🌐
+        - *Description*: Transnational digital identity card issued to global citizens, allowing them to establish and run an EU-based business online.
+        - *Required Documents*: `Passport scan`, `Motivation statement`, `Credit Card payment`, `Biometric collection at embassy`
+      - [Service] *e-Voting (i-Voting Remote Election System)* 🌐
+        - *Description*: Secure internet voting system allowing citizens to cast ballots from anywhere in the world during elections.
+        - *Required Documents*: `Estonian Smart ID Card or Mobile-ID`, `PIN Codes`
+      - [Service] *Electronic Health Record (EHR) & e-Prescriptions* 🌐
+        - *Description*: Secure blockchain-backed patient records portal sharing diagnostic history and automated electronic medical prescriptions.
+        - *Required Documents*: `Digital ID login`
+    - **Singpass (Singapore National Digital Identity)** (Benchmark Portal)
+      - [Service] *MyInfo Consent-Based Data Sharing API* 🌐
+        - *Description*: Personal data platform allowing users to consent to pre-fill forms automatically for government and private banking services.
+        - *Required Documents*: `Singpass App credentials`, `User explicit biometric consent`
+      - [Service] *Singpass Sign (Digital Contract Signing)* 🌐
+        - *Description*: Secure legal signing of business documents and property loans using cryptographic signatures validated by Singpass.
+        - *Required Documents*: `Document PDF`, `Singpass App scanner`
+    - **DigiLocker (Indian Digital Document Wallet)** (Benchmark Portal)
+      - [Service] *DigiLocker Document Wallet & Verifier* 🌐
+        - *Description*: Storage and instant retrieval of academic boards transcripts, driver licenses, and insurance deeds directly verified by issuing authorities.
+        - *Required Documents*: `Aadhaar Card Link`, `OTP Verification`
