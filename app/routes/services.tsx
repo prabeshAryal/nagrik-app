@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import { departmentHubs, services } from "../data";
-import { Icon, PageHeader, ServiceCard } from "../components";
+import { Icon, PageHeader } from "../components";
 
 export default function Services() {
   const [params, setParams] = useSearchParams();
@@ -62,7 +62,7 @@ export default function Services() {
   return (
     <div className="page services-hierarchy-page">
       <PageHeader
-        eyebrow="OFFICIAL DIRECTORY & AUTHORITIES"
+        eyebrow="NATIONAL SERVICE DIRECTORY"
         title="Government Services"
         copy="Access digital public services categorized by responsible department, municipal ward, and administrative authority."
       />
@@ -74,7 +74,7 @@ export default function Services() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search service or authority (e.g. Citizenship, Ward Sifaris, Lalpurja, PAN)..."
+            placeholder="Search service, office (e.g. Citizenship, Ward Sifaris, Lalpurja, PAN)..."
           />
           {query && (
             <button
@@ -159,9 +159,20 @@ export default function Services() {
               </div>
             </div>
             {activeHubServices.length > 0 ? (
-              <div className="service-grid catalog">
+              <div className="services-row-list">
                 {activeHubServices.map((s) => (
-                  <ServiceCard key={s.id} service={s} />
+                  <Link to={`/services/${s.id}`} key={s.id} className="service-row-card">
+                    <span className={`service-row-icon ${activeHub.theme}`}>
+                      <Icon name={activeHub.iconName} size={18} />
+                    </span>
+                    <div className="service-row-main">
+                      <b>{s.name}</b>
+                      <small className="nepali">{s.nepali} · {s.agency}</small>
+                    </div>
+                    <span className="service-row-fee">{s.fee}</span>
+                    <span className="service-row-tag">{s.type}</span>
+                    <Icon name="chevron" size={16} />
+                  </Link>
                 ))}
               </div>
             ) : (
@@ -174,7 +185,7 @@ export default function Services() {
           </div>
         </div>
       ) : (
-        /* Hierarchical Department Hubs Grid */
+        /* Hierarchical Department Directory with Expanded Row Items */
         <div className="dept-directory-grid">
           {hubData.length > 0 ? (
             hubData.map((hub) => (
@@ -206,7 +217,7 @@ export default function Services() {
 
                 <p className="dept-hub-tagline">{hub.tagline}</p>
 
-                {/* Sub-services categorized inside */}
+                {/* Sub-services compact 1-row items */}
                 <div className="dept-sub-services">
                   {hub.services.map((s) => (
                     <Link
