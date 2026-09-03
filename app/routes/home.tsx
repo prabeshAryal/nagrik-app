@@ -36,17 +36,6 @@ export default function Home() {
 
   return (
     <div className="page home-page">
-      {/* Mobile Welcome Header */}
-      <section className="mobile-welcome">
-        <div>
-          <p className="eyebrow">नमस्कार · GOOD AFTERNOON</p>
-          <h1>Prabin Shrestha</h1>
-        </div>
-        <Link to="/profile" className="home-avatar">
-          <img src="/avatar.jpg" alt="Prabin Shrestha" />
-        </Link>
-      </section>
-
       {/* Citizen Card + Actions Row */}
       <section className="home-dashboard">
         <div className="citizen-card">
