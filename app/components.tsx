@@ -9,14 +9,38 @@ const paths:Record<IconName,React.ReactNode>={
 };
 export function Icon({name,size=22}:{name:IconName;size?:number}){return <svg className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>}
 
-export function NepalFlag({size=26}:{size?:number}){
+export function NepalFlag({size=24,className="nepal-flag-svg"}:{size?:number;className?:string}){
   return (
-    <svg width={size} height={Math.round(size*1.22)} viewBox="0 0 100 122" fill="none" xmlns="http://www.w3.org/2000/svg" className="nepal-flag-svg" aria-label="Flag of Nepal">
-      <path d="M4 4V118H96L36 66H84L4 4Z" fill="#003580" stroke="#003580" strokeWidth="4" strokeLinejoin="round" />
-      <path d="M12 14V110H80L32 66H70L12 14Z" fill="#DC143C" />
-      <path d="M26 38C32.5 38 38 33 38 26.5C38 21.8 35.2 17.8 31.2 16C30.8 18.2 28.8 20 26 20C23.2 20 21.2 18.2 20.8 16C16.8 17.8 14 21.8 14 26.5C14 33 19.5 38 26 38Z" fill="#FFFFFF" />
-      <circle cx="28" cy="86" r="6" fill="#FFFFFF" />
-      <path d="M28 74L30 80H26L28 74ZM28 98L26 92H30L28 98ZM16 86L22 84V88L16 86ZM40 86L34 88V84L40 86ZM19.5 77.5L25 80.5L23 83.5L19.5 77.5ZM36.5 94.5L31 91.5L33 88.5L36.5 94.5ZM19.5 94.5L23 88.5L25 91.5L19.5 94.5ZM36.5 77.5L33 83.5L31 80.5L36.5 77.5Z" fill="#FFFFFF" />
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width={size} height={Math.round(size*(885/726))} viewBox="-17.582 -4.664 71.571 87.246" className={className} aria-label="Flag of Nepal">
+      <use xlinkHref="#nepal-flag-path" stroke="#003893" strokeWidth="5.165"/>
+      <path id="nepal-flag-path" d="M -15,37.5735931288 h 60 L -15,0 v 80 h 60 L -15,20 z" fill="#DC143C"/>
+      <g fill="#fff">
+        <path d="M -11.9502769431,23.4834957055 A 12.8400974233,12.8400974233 0 0,0 11.9502769431,23.4834957055 A 11.9502769431 11.9502769431 0 0,1 -11.9502769431,23.4834957055"/>
+        <g transform="translate(0 29.045) scale(5.56106)">
+          <circle r="1"/>
+          <g id="nepal-flag-d">
+            <g id="nepal-flag-c">
+              <path id="nepal-flag-b" d="M 0.195090322016,-0.980785280403 L 0,-1.388784109750 L -0.195090322016,-0.980785280403" transform="rotate(11.25)"/>
+              <use xlinkHref="#nepal-flag-b" transform="rotate(22.5)"/>
+              <use xlinkHref="#nepal-flag-b" transform="rotate(45)"/>
+            </g>
+            <use xlinkHref="#nepal-flag-c" transform="rotate(67.5)"/>
+          </g>
+          <use xlinkHref="#nepal-flag-d" transform="scale(-1 1)"/>
+        </g>
+        <g transform="matrix(8.1434 0 0 8.1434 0 58.787)">
+          <circle r="1"/>
+          <g id="nepal-flag-g">
+            <g id="nepal-flag-f">
+              <path id="nepal-flag-e" d="M 0.258819045103,0.965925826289 L 0,1.576749285537 L -0.258819045103,0.965925826289"/>
+              <use xlinkHref="#nepal-flag-e" transform="rotate(180)"/>
+            </g>
+            <use xlinkHref="#nepal-flag-f" transform="rotate(90)"/>
+          </g>
+          <use xlinkHref="#nepal-flag-g" transform="rotate(30)"/>
+          <use xlinkHref="#nepal-flag-g" transform="rotate(60)"/>
+        </g>
+      </g>
     </svg>
   );
 }
